@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../Desktop/Technische Informatica/JAAR 2/BLOK 6/PROGH1/Bijlage opdrachten/Bijlage opdrachten/Week 3 - ALU/binary_to_bcd_digit.vhd" \
+"../../../../../Desktop/Technische Informatica/JAAR 2/BLOK 6/PROGH1/Bijlage opdrachten/Bijlage opdrachten/Week 3 - ALU/binary_to_bcd.vhd" \
+
+# Do not sort compile order
+nosort
