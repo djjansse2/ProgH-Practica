@@ -49,10 +49,11 @@ process(Op)
 variable SignedA,SignedB,SignedRes : signed(8 downto 0);
 
 begin
-    if (A = B) then
-        Equal = '1';
+
+    if A = B then
+        Equal <= '1';
     else
-        Equal = '0';
+        Equal <= '0';
     end if;
 
     SignedA := resize(signed(A), 9);
@@ -80,7 +81,7 @@ begin
     when "1010" =>
         SignedRes := SignedA rol 1;
     when "1011" =>
-        SignedRes := '0' (SignedA(7 downto 0) ror 1);
+        SignedRes := '0' & (SignedA(7 downto 0) ror 1);
     when "1110" =>
         SignedRes := "000000000";
     when "1111" =>
