@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="35" Path="C:/Users/Daniel/Practicum03/Practicum03.xpr">
+<Project Version="7" Minor="35" Path="C:/Users/djans/Documents/ProgH-Practica/Practicum03/Practicum03.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="8bb216abcbb04efaa0364bc1f5ec090b"/>
@@ -33,7 +33,7 @@
     <Option Name="DSAVendor" Val="xilinx"/>
     <Option Name="DSABoardId" Val="basys3"/>
     <Option Name="DSANumComputeUnits" Val="60"/>
-    <Option Name="WTXSimLaunchSim" Val="1"/>
+    <Option Name="WTXSimLaunchSim" Val="2"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -57,26 +57,26 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PPRDIR/../Desktop/Technische Informatica/JAAR 2/BLOK 6/PROGH1/Bijlage opdrachten/Bijlage opdrachten/Week 3 - ALU/binary_to_bcd_digit.vhd">
+      <File Path="$PSRCDIR/sources_1/new/binary_to_bcd_digit.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../Desktop/Technische Informatica/JAAR 2/BLOK 6/PROGH1/Bijlage opdrachten/Bijlage opdrachten/Week 3 - ALU/binary_to_bcd.vhd">
+      <File Path="$PSRCDIR/sources_1/new/binary_to_bcd.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../Desktop/Technische Informatica/JAAR 2/BLOK 6/PROGH1/Bijlage opdrachten/Bijlage opdrachten/Week 3 - ALU/alu_tb.vhd">
+      <File Path="$PSRCDIR/sources_1/new/ALU.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/ALU.vhd">
+      <File Path="$PSRCDIR/sources_1/new/alu_tb.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>

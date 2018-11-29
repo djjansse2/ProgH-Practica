@@ -85,6 +85,8 @@ begin
         SignedRes := "000000000";
     when "1111" =>
         SignedRes := "111111111";
+    when others =>
+        SignedRes := "000000000";
     end case;
 
     Res <= STD_LOGIC_VECTOR(SignedRes(7 downto 0));
