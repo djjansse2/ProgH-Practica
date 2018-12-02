@@ -73,3 +73,6 @@ set_property IOSTANDARD LVCMOS33 [get_ports {OpButtons[0]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {Bin[2]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {Ain[6]}]
 set_property IOSTANDARD LVCMOS33 [get_ports EqualInd]
+
+set_property PACKAGE_PIN U18 [get_ports {OpButtons[4]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {OpButtons[4]}]

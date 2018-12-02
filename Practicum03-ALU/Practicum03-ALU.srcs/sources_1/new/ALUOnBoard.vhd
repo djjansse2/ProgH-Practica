@@ -34,7 +34,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity ALUOnBoard is
   Port (  Ain         : in STD_LOGIC_VECTOR (7 downto 0);
   Bin         : in STD_LOGIC_VECTOR (7 downto 0);
-  OpButtons   : in STD_LOGIC_VECTOR (3 downto 0);
+  OpButtons   : in STD_LOGIC_VECTOR (4 downto 0);
   clk         : in STD_LOGIC;
   OpInd       : out STD_LOGIC_VECTOR (3 downto 0);
   segmentSel  : out STD_LOGIC_VECTOR(3 downto 0);
@@ -82,18 +82,10 @@ architecture Behavioral of ALUOnBoard is
 
     begin
 
-      if (rising_edge(OpButtons(0))) then
-        OpSig(0) <= not OpSig(0);
-      end if;
-      if (rising_edge(OpButtons(1))) then
-        OpSig(1) <= not OpSig(1);
-      end if;
-      if (rising_edge(OpButtons(2))) then
-        OpSig(2) <= not OpSig(2);
-      end if;
-      if (rising_edge(OpButtons(3))) then
-        OpSig(3) <= not OpSig(3);
-      end if;
+        OpSig(0) <= OpButtons(0);
+        OpSig(1) <= OpButtons(1);
+        OpSig(2) <= OpButtons(2);
+        OpSig(3) <= OpButtons(3);
 
     end process;
 

@@ -20,79 +20,76 @@
 
 
 library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
+use     IEEE.STD_LOGIC_1164.ALL;
+use     IEEE.NUMERIC_STD.ALL;
 
 entity ALU is
-    port (  A, B    : in STD_LOGIC_VECTOR (7 downto 0);
-            Op      : in STD_LOGIC_VECTOR (3 downto 0);
-            Res     : out STD_LOGIC_VECTOR (7 downto 0);
-            Cout    : out STD_LOGIC;
-            Equal   : out STD_LOGIC);
+ Port ( A,B   : in STD_LOGIC_VECTOR(7 downto 0);
+        Op    : in STD_LOGIC_VECTOR(3 downto 0);
+        Res   : out STD_LOGIC_VECTOR(7 downto 0);
+        Cout  : out STD_LOGIC;
+        Equal : out STD_LOGIC);
 end ALU;
 
 architecture Behavioral of ALU is
 
 begin
 
-process(Op, A, B)
-
-variable SignedA,SignedB,SignedRes : signed(8 downto 0);
-
-begin
-
-    if A = B then
+Conversion : process(A,B)
+    begin
+    if  A = B then
         Equal <= '1';
     else
         Equal <= '0';
     end if;
+end process Conversion;
 
-    SignedA := resize(signed(A), 9);
-    SignedB := resize(signed(B), 9);
+Operations : process(Op,A,B)
 
-    case Op is
-    when "0000" =>
-        SignedRes := SignedA + SignedB;
-    when "0001" =>
-        SignedRes := SignedA - SignedB;
-    when "0010" =>
-        SignedRes := SignedB - SignedA;
-    when "0100" =>
-        SignedRes := SignedA;
-    when "0101" =>
-        SignedRes := SignedB;
-    when "0110" =>
-        SignedRes := -SignedA;
-    when "0111" =>
-        SignedRes := -SignedB;
-    when "1000" =>
-        SignedRes := SignedA sll 1;
-    when "1001" =>
-        SignedRes := '0' & (SignedA(7 downto 0) srl 1);
-    when "1010" =>
-        SignedRes := SignedA rol 1;
-    when "1011" =>
-        SignedRes := '0' & (SignedA(7 downto 0) ror 1);
-    when "1110" =>
-        SignedRes := "000000000";
-    when "1111" =>
-        SignedRes := "111111111";
-    when others =>
-        SignedRes := "000000000";
-    end case;
+    variable SignedA,SignedB,SignedRes : signed(8 downto 0);
 
-    Res <= STD_LOGIC_VECTOR(SignedRes(7 downto 0));
-    Cout <= SignedRes(8);
-end process;
+    begin
+
+        SignedA := resize(signed(A), 9);
+        SignedB := resize(signed(B), 9);
+
+        case Op is
+            when "0000" =>
+                SignedRes := SignedA + SignedB;
+            when "0001" =>
+                SignedRes := SignedA - SignedB;
+            when "0010" =>
+                SignedRes := SignedB - SignedA;
+            when "0100" =>
+                SignedRes := SignedA;
+            when "0101" =>
+                SignedRes := SignedB;
+            when "0110" =>
+                SignedRes := -SignedA;
+            when "0111" =>
+                SignedRes := -SignedB;
+            when "1000" =>
+                SignedRes := SignedA sll 1;
+            when "1001" =>
+                SignedRes := '0' & (SignedA(7 downto 0) srl 1);
+            when "1010" =>
+                SignedRes := SignedA rol 1;
+            when "1011" =>
+                SignedRes := '0' & (SignedA(7 downto 0) ror 1);
+            when "1110" =>
+                SignedRes := "000000000";
+            when "1111" =>
+                SignedRes := "111111111";
+            when others =>
+                SignedRes := "000000000";
+            end case;
+
+            Cout <= SignedRes(8);
+            Res  <= std_logic_vector(SignedRes(7 downto 0));
+
+
+end process Operations;
+
 
 
 end Behavioral;

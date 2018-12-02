@@ -52,7 +52,7 @@ architecture Behavioral of BinToBCD is
 
     variable tempnum : signed(7 downto 0);
 
-    variable tempvec : STD_LOGIC_VECTOR (11 downto 0);
+    variable tempvec : STD_LOGIC_VECTOR (7 downto 0);
 
     variable bcd : UNSIGNED (15 downto 0) := (others => '0');
 
@@ -62,10 +62,10 @@ architecture Behavioral of BinToBCD is
       tempnum := signed(binvec);
 
       if (signedEnable = '1') then
-        if (binvec(7) = '1') then
-          thousandsvec <= "1111";
-          tempnum := -tempnum;
-        end if;
+      if (binvec(7) = '1') then
+                  thousandsvec <= "1111";
+                  tempnum := -tempnum;
+              end if; 
       end if;
 
       tempvec(7 downto 0) := std_logic_vector(tempnum);
@@ -82,9 +82,9 @@ architecture Behavioral of BinToBCD is
         if bcd(11 downto 8) > 4 then
           bcd(11 downto 8) := bcd(11 downto 8) + 3;
         end if;
-        bcd := bcd(14 downto 0) & tempvec(11);
+        bcd := bcd(14 downto 0) & tempvec(7);
 
-        tempvec := tempvec(10 downto 0) & '0';
+        tempvec := tempvec(6 downto 0) & '0';
       end loop;
 
       unitsvec <= STD_LOGIC_VECTOR(bcd(3 downto 0));

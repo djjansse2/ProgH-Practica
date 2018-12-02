@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Fri Nov 30 14:52:29 2018
+# Process ID: 3784
+# Current directory: D:/Documents/ProgH-Practica/Practicum03-ALU/Practicum03-ALU.runs/impl_1
+# Command line: vivado.exe -log ALUOnBoard.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source ALUOnBoard.tcl -notrace
+# Log file: D:/Documents/ProgH-Practica/Practicum03-ALU/Practicum03-ALU.runs/impl_1/ALUOnBoard.vdi
+# Journal file: D:/Documents/ProgH-Practica/Practicum03-ALU/Practicum03-ALU.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source ALUOnBoard.tcl -notrace
