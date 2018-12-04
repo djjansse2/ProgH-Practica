@@ -33,10 +33,15 @@ use IEEE.numeric_std.all;
 --use UNISIM.VComponents.all;
 
 entity BinToBCD is
-  Port (  binvec : in  STD_LOGIC_VECTOR(7 downto 0);
-          unitsvec : out STD_LOGIC_VECTOR(3 downto 0);
-          tensvec : out STD_LOGIC_VECTOR(3 downto 0);
-          hundredsvec : out  STD_LOGIC_VECTOR (3 downto 0));
+  Port (
+  signedEnable : in STD_LOGIC;
+  binvec : in  STD_LOGIC_VECTOR(7 downto 0);
+  unitsvec : out STD_LOGIC_VECTOR(3 downto 0);
+  tensvec : out STD_LOGIC_VECTOR(3 downto 0);
+  hundredsvec : out  STD_LOGIC_VECTOR (3 downto 0);
+  thousandsvec : out  STD_LOGIC_VECTOR (3 downto 0)
+
+  );
 end BinToBCD;
 
 architecture Behavioral of BinToBCD is
@@ -45,14 +50,25 @@ architecture Behavioral of BinToBCD is
 
     bcd : process(binvec)
 
-    variable tempvec : STD_LOGIC_VECTOR (7 downto 0);
+    variable tempnum : signed(7 downto 0);
 
-    variable bcd : UNSIGNED (11 downto 0) := (others => '0');
+    variable tempvec : STD_LOGIC_VECTOR (11 downto 0);
+
+    variable bcd : UNSIGNED (15 downto 0) := (others => '0');
 
     begin
 
       bcd := (others => '0');
-      tempvec(7 downto 0) := binvec;
+      tempnum := signed(binvec);
+
+      if (signedEnable = '1') then
+        if (binvec(7) = '1') then
+          thousandsvec <= "1111";
+          tempnum := -tempnum;
+        end if;
+      end if;
+
+      tempvec(7 downto 0) := std_logic_vector(tempnum);
 
       for i in 0 to 7 loop
         if bcd(3 downto 0) > 4 then
@@ -66,14 +82,14 @@ architecture Behavioral of BinToBCD is
         if bcd(11 downto 8) > 4 then
           bcd(11 downto 8) := bcd(11 downto 8) + 3;
         end if;
-        bcd := bcd(10 downto 0) & tempvec(7);
+        bcd := bcd(14 downto 0) & tempvec(11);
 
-        tempvec := tempvec(6 downto 0) & '0';
+        tempvec := tempvec(10 downto 0) & '0';
       end loop;
 
       unitsvec <= STD_LOGIC_VECTOR(bcd(3 downto 0));
       tensvec <= STD_LOGIC_VECTOR(bcd(7 downto 4));
       hundredsvec <= STD_LOGIC_VECTOR(bcd(11 downto 8));
-  end process;
+    end process;
 
-end Behavioral;
+  end Behavioral;
