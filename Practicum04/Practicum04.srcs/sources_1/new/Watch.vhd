@@ -61,6 +61,7 @@ begin
       clkCnt := clkCnt + 1;
 
       if( clkCnt >= 100000000 ) then
+        clkCnt := 0;
         secCnt := secCnt + 1;
 
         if( secCnt > 60 ) then

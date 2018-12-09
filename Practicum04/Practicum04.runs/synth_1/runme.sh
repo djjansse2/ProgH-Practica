@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/Daniel/Documents/ProgH-Practica/Practicum04/Practicum04.runs/synth_1'
+HD_PWD='C:/Users/djans/Documents/ProgH-Practica/Practicum04/Practicum04.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
