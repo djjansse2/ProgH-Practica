@@ -1,0 +1,42 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Thu Dec  6 14:39:12 2018
+# Process ID: 10884
+# Current directory: C:/Users/djans/Documents/ProgH-Practica/Practicum04/Practicum04.runs/impl_1
+# Command line: vivado.exe -log stopwatch.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source stopwatch.tcl -notrace
+# Log file: C:/Users/djans/Documents/ProgH-Practica/Practicum04/Practicum04.runs/impl_1/stopwatch.vdi
+# Journal file: C:/Users/djans/Documents/ProgH-Practica/Practicum04/Practicum04.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source stopwatch.tcl -notrace
+create_project: Time (s): cpu = 00:00:00 ; elapsed = 00:00:11 . Memory (MB): peak = 231.902 ; gain = 5.715
+Command: link_design -top stopwatch -part xc7a35tcpg236-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Netlist 29-17] Analyzing 321 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'stopwatch' is not ideal for floorplanning, since the cellview 'Watch' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-479] Netlist was created with Vivado 2017.4
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/djans/Documents/ProgH-Practica/Practicum04/Practicum04.srcs/constrs_1/new/constrains.xdc]
+Finished Parsing XDC File [C:/Users/djans/Documents/ProgH-Practica/Practicum04/Practicum04.srcs/constrs_1/new/constrains.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+7 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:09 ; elapsed = 22:28:38 . Memory (MB): peak = 547.000 ; gain = 309.891
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 559.016 ; gain = 12.016
