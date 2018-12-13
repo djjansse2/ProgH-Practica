@@ -44,20 +44,36 @@ architecture Behavioral of bouncecube is
 
   component vga is
       Port ( 	clk25 : in STD_LOGIC;
-  			    red, green, blue : out  STD_LOGIC;
-  			    hsync, vsync : out  STD_LOGIC);
+              redI, greenI, blueI : in STD_LOGIC;
+  			      red, green, blue : out  STD_LOGIC;
+              hcounto, vcounto : out STD_LOGIC_VECTOR(9 downto 0);
+  			      hsync, vsync : out  STD_LOGIC;
+              vsyncclk : out STD_LOGIC);
   end component;
-  
+
   component clk_wiz_0 is
      Port ( clk_in1 : in STD_LOGIC;
             clk_out1 : out STD_LOGIC);
   end component;
 
+  component squarecube is
+      Port ( vcount : in STD_LOGIC_VECTOR (9 downto 0);
+             hcount : in STD_LOGIC_VECTOR (9 downto 0);
+             clk : in STD_LOGIC;
+             red : out STD_LOGIC;
+             green : out STD_LOGIC;
+             blue : out STD_LOGIC);
+  end component;
+
   SIGNAL clksig : STD_LOGIC;
+  SIGNAL hcounts, vcounts : STD_LOGIC_VECTOR(9 downto 0);
+  SIGNAL reds, greens, blues : STD_LOGIC;
+  SIGNAL vsyncclk : STD_LOGIC;
 
 begin
 
-  compvga : vga port map( clk25 => CLKsig, red => red, green => green, blue => blue, hsync => hsync, vsync => vsync );
+  compvga : vga port map( clk25 => CLKsig, redI => reds, greenI => greens, blueI => blues, red => red, green => green, blue => blue, hcounto => hcounts, vcounto => vcounts, hsync => hsync, vsync => vsync, vsyncclk => vsyncclk );
   clkdiv : clk_wiz_0 port map( clk_in1 => clk, clk_out1 => clksig );
+  compsq : squarecube port map( vcount => vcounts, hcount => hcounts, clk => vsyncclk, red => reds, green => greens, blue => blues );
 
 end Behavioral;
