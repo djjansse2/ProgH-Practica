@@ -60,27 +60,24 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param xicom.use_bs_reader 1
-  set_param synth.incrementalSynthesisCache C:/Users/Daniel/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-15620-DESKTOP-I8VS7IB/incrSyn
   create_project -in_memory -part xc7a35tcpg236-1
   set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/Daniel/Documents/ProgH-Practica/Practicum06/Practicum06.cache/wt [current_project]
-  set_property parent.project_path C:/Users/Daniel/Documents/ProgH-Practica/Practicum06/Practicum06.xpr [current_project]
-  set_property ip_output_repo C:/Users/Daniel/Documents/ProgH-Practica/Practicum06/Practicum06.cache/ip [current_project]
+  set_property webtalk.parent_dir Y:/ProgH-Practica/Practicum06/Practicum06.cache/wt [current_project]
+  set_property parent.project_path Y:/ProgH-Practica/Practicum06/Practicum06.xpr [current_project]
+  set_property ip_output_repo Y:/ProgH-Practica/Practicum06/Practicum06.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_CDC [current_project]
-  add_files -quiet C:/Users/Daniel/Documents/ProgH-Practica/Practicum06/Practicum06.runs/synth_1/bouncecube.dcp
-  read_ip -quiet c:/Users/Daniel/Documents/ProgH-Practica/Practicum06/Practicum06.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
-  read_xdc C:/Users/Daniel/Documents/ProgH-Practica/Practicum05/Practicum05.srcs/constrs_1/new/constraints.xdc
+  add_files -quiet Y:/ProgH-Practica/Practicum06/Practicum06.runs/synth_1/bouncecube.dcp
+  read_ip -quiet Y:/ProgH-Practica/Practicum06/Practicum06.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+  read_xdc Y:/ProgH-Practica/Practicum05/Practicum05.srcs/constrs_1/new/constraints.xdc
   link_design -top bouncecube -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb
 } RESULT]
