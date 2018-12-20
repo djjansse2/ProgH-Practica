@@ -68,7 +68,9 @@ begin
 
       if vcount = 521 then
         vcount <= (others => '0');
-        vsyncclk <= '1';
+        if hcount = 800 then
+          vsyncclk <= '1';
+        end if;
       else
         vsyncclk <= '0';
       end if;
