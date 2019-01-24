@@ -1,0 +1,2 @@
+memory_initialization_radix=16;
+memory_initialization_vector=3FE, 5FE, 6FE, 77E, 76F, 777, 6F7, 5F7,  3F7, 3FB, 3FE, 5FE,  6FE, 77E, 75F, 73F;
