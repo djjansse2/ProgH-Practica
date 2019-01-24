@@ -89,7 +89,8 @@ begin
         --posV <= posV + 1;
       elsif(posV + size >= 510) then
         dirV <= '0';
-        --posV <= 509 - size;
+      else
+        dirV <= dirV;
       end if;
 
       if(posH <= 145) then
