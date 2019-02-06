@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Wed Feb  6 16:34:17 2019
-| Host         : LAPTOP-HRAQ4RRP running 64-bit major release  (build 9200)
+| Date         : Wed Feb  6 21:26:25 2019
+| Host         : DESKTOP-I8VS7IB running 64-bit major release  (build 9200)
 | Command      : report_utilization -file AudioGen_utilization_synth.rpt -pb AudioGen_utilization_synth.pb
 | Design       : AudioGen
 | Device       : 7a35tcpg236-1
@@ -30,11 +30,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |   52 |     0 |     20800 |  0.25 |
-|   LUT as Logic          |   52 |     0 |     20800 |  0.25 |
+| Slice LUTs*             |   56 |     0 |     20800 |  0.27 |
+|   LUT as Logic          |   56 |     0 |     20800 |  0.27 |
 |   LUT as Memory         |    0 |     0 |      9600 |  0.00 |
-| Slice Registers         |   78 |     0 |     41600 |  0.19 |
-|   Register as Flip Flop |   78 |     0 |     41600 |  0.19 |
+| Slice Registers         |   79 |     0 |     41600 |  0.19 |
+|   Register as Flip Flop |   79 |     0 |     41600 |  0.19 |
 |   Register as Latch     |    0 |     0 |     41600 |  0.00 |
 | F7 Muxes                |    0 |     0 |     16300 |  0.00 |
 | F8 Muxes                |    0 |     0 |      8150 |  0.00 |
@@ -57,7 +57,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 78    |          Yes |       Reset |            - |
+| 79    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -115,7 +115,7 @@ Table of Contents
 +------------+------+-------+-----------+-------+
 |  Site Type | Used | Fixed | Available | Util% |
 +------------+------+-------+-----------+-------+
-| BUFGCTRL   |    0 |     0 |        32 |  0.00 |
+| BUFGCTRL   |    1 |     0 |        32 |  3.13 |
 | BUFIO      |    0 |     0 |        20 |  0.00 |
 | MMCME2_ADV |    0 |     0 |         5 |  0.00 |
 | PLLE2_ADV  |    0 |     0 |         5 |  0.00 |
@@ -149,16 +149,16 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |   78 |        Flop & Latch |
-| LUT2     |   35 |                 LUT |
-| CARRY4   |   31 |          CarryLogic |
+| FDRE     |   79 |        Flop & Latch |
+| LUT2     |   39 |                 LUT |
+| CARRY4   |   33 |          CarryLogic |
 | LUT3     |   12 |                 LUT |
-| LUT5     |    9 |                 LUT |
-| LUT1     |    5 |                 LUT |
+| LUT5     |   10 |                 LUT |
+| LUT1     |    6 |                 LUT |
+| LUT6     |    2 |                 LUT |
 | OBUF     |    1 |                  IO |
-| LUT6     |    1 |                 LUT |
-| LUT4     |    1 |                 LUT |
 | IBUF     |    1 |                  IO |
+| BUFG     |    1 |               Clock |
 +----------+------+---------------------+
 
 
@@ -168,7 +168,6 @@ Table of Contents
 +-------------+------+
 |   Ref Name  | Used |
 +-------------+------+
-| clk_wiz_0   |    1 |
 | BertErnie8K |    1 |
 +-------------+------+
 

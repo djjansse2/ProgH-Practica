@@ -39,30 +39,39 @@ end ROMSelect;
 architecture Behavioral of ROMSelect is
 
 SIGNAL addTemp : unsigned(12 downto 0) := (others => '0');
+SIGNAL enable : STD_LOGIC := '0';
+SIGNAL prescaler : integer := 0;
 
 begin
 
   process(clk)
-  
-  variable prescaler : integer := 0;
-  
+
   begin
-  
+
     if rising_edge(clk) then
-        if(prescaler < 3840) then
-            prescaler := prescaler + 1;
+        if(prescaler < 12850) then
+            enable <= '0';
+            prescaler <= prescaler + 1;
         else
-            if (addTemp < 6710) then
-                addTemp <= addTemp + 1;
-            else
-                addTemp <= (others => '0');
-            end if;
-            prescaler := 0;
-        end if;    
+            enable <= '1';
+            prescaler <= 0;
+        end if;
     end if;
-  
+
     add <= STD_LOGIC_VECTOR(addTemp);
-  
+
   end process;
 
+  process(clk, enable)
+  begin
+      if rising_edge(clk) then
+          if(enable = '1') then
+              if (addTemp < 6709) then
+                  addTemp <= addTemp + 1;
+              else
+                  addTemp <= (others => '0');
+              end if;
+          end if;
+      end if;
+    end process;
 end Behavioral;
