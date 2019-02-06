@@ -45,7 +45,7 @@ architecture Behavioral of AudioGen is
 
   component ROMSelect is
       Port ( clk : in STD_LOGIC;
-             data : out STD_LOGIC_VECTOR (7 downto 0));
+             add : out STD_LOGIC_VECTOR (12 downto 0));
   end component;
 
   component Converter is
@@ -53,14 +53,22 @@ architecture Behavioral of AudioGen is
              clk : in STD_LOGIC;
              q : out STD_LOGIC);
   end component;
+  
+  component BertErnie8K is
+      Port ( addra : in STD_LOGIC_VECTOR (12 downto 0);
+             clka : in STD_LOGIC;
+             douta : out STD_LOGIC_VECTOR (7 downto 0));
+  end component;
 
   SIGNAL dataS : STD_LOGIC_VECTOR(7 downto 0);
+  SIGNAL addS : STD_LOGIC_VECTOR(12 downto 0);
   SIGNAL clkS : STD_LOGIC;
 
 begin
 
+  rom : BertErnie8K port map( addra => addS, clka => clk, douta => dataS );
   clkWiz : clk_wiz_0 port map( clk_in1 => clk, clk_out1 => clkS );
-  ROMSel : ROMSelect port map( clk => clkS, data => dataS );
+  ROMSel : ROMSelect port map( clk => clkS, add => addS );
   Convert : Converter port map( data => dataS, clk => clk, q => q );
 
 end Behavioral;

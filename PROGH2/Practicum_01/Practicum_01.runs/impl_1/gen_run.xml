@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1549467215">
+  <File Type="PWROPT-DCP" Name="AudioGen_pwropt.dcp"/>
+  <File Type="ROUTE-PWR" Name="AudioGen_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="AudioGen.tcl"/>
+  <File Type="ROUTE-PWR-SUM" Name="AudioGen_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="AudioGen_reports.tcl"/>
+  <File Type="BG-DRC" Name="AudioGen.drc"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="AudioGen_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="AudioGen_timing_summary_init.rpt"/>
+  <File Type="OPT-HWDEF" Name="AudioGen.hwdef"/>
+  <File Type="OPT-DCP" Name="AudioGen_opt.dcp"/>
+  <File Type="OPT-DRC" Name="AudioGen_drc_opted.rpt"/>
+  <File Type="OPT-TIMING" Name="AudioGen_timing_summary_opted.rpt"/>
+  <File Type="PWROPT-DRC" Name="AudioGen_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="AudioGen_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="AudioGen_placed.dcp"/>
+  <File Type="PLACE-IO" Name="AudioGen_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="AudioGen_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="AudioGen_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="AudioGen_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="AudioGen_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="AudioGen_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="AudioGen_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="AudioGen_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="AudioGen_postplace_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="AudioGen_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="AudioGen_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="AudioGen_drc_physopted.rpt"/>
+  <File Type="BG-BIT" Name="AudioGen.bit"/>
+  <File Type="PHYSOPT-TIMING" Name="AudioGen_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="AudioGen_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="AudioGen_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="AudioGen_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="AudioGen_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="AudioGen_drc_routed.pb"/>
+  <File Type="BITSTR-MSK" Name="AudioGen.msk"/>
+  <File Type="ROUTE-DRC-RPX" Name="AudioGen_drc_routed.rpx"/>
+  <File Type="BG-BGN" Name="AudioGen.bgn"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="AudioGen_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-RBT" Name="AudioGen.rbt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="AudioGen_methodology_drc_routed.rpx"/>
+  <File Type="BG-BIN" Name="AudioGen.bin"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="AudioGen_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="AudioGen_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="AudioGen_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="AudioGen_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="AudioGen_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="AudioGen_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="AudioGen_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="AudioGen_incremental_reuse_routed.rpt"/>
+  <File Type="RDI-RDI" Name="AudioGen.vdi"/>
+  <File Type="ROUTE-CLK" Name="AudioGen_clock_utilization_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="AudioGen_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="AudioGen_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="AudioGen_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="AudioGen_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="AudioGen_timing_summary_postroute_physopted.rpx"/>
+  <File Type="BITSTR-NKY" Name="AudioGen.nky"/>
+  <File Type="BITSTR-BMM" Name="AudioGen_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="AudioGen.mmi"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="AudioGen.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="AudioGen.sysdef"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/Converter.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ROMSelect.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/AudioGen.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Files/Bijlage opdrachten/Week 1 - Sound/BertErnie8k.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="AudioGen"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/constraints.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/constraints.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="BertErnie8K"/>
+  <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>
+</GenRun>

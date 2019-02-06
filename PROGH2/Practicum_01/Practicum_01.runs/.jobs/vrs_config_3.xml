@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="BertErnie8K_synth_1" LaunchDir="D:/Documents/ProgH-Practica/PROGH2/Practicum_01/Practicum_01.runs/BertErnie8K_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+</Runs>
+

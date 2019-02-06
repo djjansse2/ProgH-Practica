@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="BertErnie8K_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1548925294">
+<GenRun Id="BertErnie8K_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1549465711">
   <File Type="PA-TCL" Name="BertErnie8K.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="BertErnie8K_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="BertErnie8K_reports.tcl"/>
   <File Type="RDS-RDS" Name="BertErnie8K.vds"/>
   <File Type="RDS-UTIL" Name="BertErnie8K_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="BertErnie8K_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="BertErnie8K.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="BertErnie8K_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="BertErnie8K_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/BertErnie8K">
     <File Path="$PSRCDIR/sources_1/ip/BertErnie8K/BertErnie8K.xci">
       <FileInfo>
