@@ -43,19 +43,20 @@ begin
 
   process(clk, data)
 
-  variable preScaler : integer := 0;
+  variable comparator : integer := 0;
   variable d : integer := to_integer(unsigned(data));
-
+  
   begin
 
     if rising_edge(clk) then
-      if(preScaler < 255) then
-        preScaler := preScaler + 1;
+    
+      if(comparator < 255) then
+        comparator := comparator + 1;
       else
-        preScaler := 0;
+        comparator := 0;
       end if;
 
-      if(preScaler < d) then
+      if(comparator < d) then
         q <= '0';
       else
         q <= '1';
