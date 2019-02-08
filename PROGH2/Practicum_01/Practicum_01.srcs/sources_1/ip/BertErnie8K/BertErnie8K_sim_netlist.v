@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-// Date        : Wed Feb  6 20:06:45 2019
+// Date        : Wed Feb  6 20:06:41 2019
 // Host        : DESKTOP-I8VS7IB running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Practicum_01/Practicum_01.srcs/sources_1/ip/BertErnie8K/BertErnie8K_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top BertErnie8K -prefix
+//               BertErnie8K_ BertErnie8K_sim_netlist.v
 // Design      : BertErnie8K
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -192,7 +192,6 @@ module BertErnie8K
         .web(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_generic_cstr" *) 
 module BertErnie8K_blk_mem_gen_generic_cstr
    (douta,
     clka,
@@ -231,7 +230,6 @@ module BertErnie8K_blk_mem_gen_generic_cstr
         .wea(wea));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_mux" *) 
 module BertErnie8K_blk_mem_gen_mux
    (douta,
     addra,
@@ -331,7 +329,6 @@ module BertErnie8K_blk_mem_gen_mux
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module BertErnie8K_blk_mem_gen_prim_width
    (douta_array,
     clka,
@@ -385,7 +382,6 @@ module BertErnie8K_blk_mem_gen_prim_width__parameterized0
         .wea(wea));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
 module BertErnie8K_blk_mem_gen_prim_wrapper_init
    (douta_array,
     clka,
@@ -875,7 +871,6 @@ module BertErnie8K_blk_mem_gen_prim_wrapper_init__parameterized0
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_top" *) 
 module BertErnie8K_blk_mem_gen_top
    (douta,
     clka,
@@ -926,7 +921,7 @@ endmodule
 (* C_USE_URAM = "0" *) (* C_WEA_WIDTH = "1" *) (* C_WEB_WIDTH = "1" *) 
 (* C_WRITE_DEPTH_A = "6710" *) (* C_WRITE_DEPTH_B = "6710" *) (* C_WRITE_MODE_A = "WRITE_FIRST" *) 
 (* C_WRITE_MODE_B = "WRITE_FIRST" *) (* C_WRITE_WIDTH_A = "8" *) (* C_WRITE_WIDTH_B = "8" *) 
-(* C_XDEVICEFAMILY = "artix7" *) (* ORIG_REF_NAME = "blk_mem_gen_v8_4_1" *) (* downgradeipidentifiedwarnings = "yes" *) 
+(* C_XDEVICEFAMILY = "artix7" *) (* downgradeipidentifiedwarnings = "yes" *) 
 module BertErnie8K_blk_mem_gen_v8_4_1
    (clka,
     rsta,
@@ -1138,7 +1133,6 @@ module BertErnie8K_blk_mem_gen_v8_4_1
         .wea(wea));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_v8_4_1_synth" *) 
 module BertErnie8K_blk_mem_gen_v8_4_1_synth
    (douta,
     clka,

@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
--- Date        : Wed Feb  6 20:06:45 2019
+-- Date        : Wed Feb  6 20:06:42 2019
 -- Host        : DESKTOP-I8VS7IB running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Practicum_01/Practicum_01.srcs/sources_1/ip/BertErnie8K/BertErnie8K_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top BertErnie8K -prefix
+--               BertErnie8K_ BertErnie8K_sim_netlist.vhdl
 -- Design      : BertErnie8K
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -21,8 +21,6 @@ entity BertErnie8K_blk_mem_gen_mux is
     clka : in STD_LOGIC;
     douta_array : in STD_LOGIC_VECTOR ( 15 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of BertErnie8K_blk_mem_gen_mux : entity is "blk_mem_gen_mux";
 end BertErnie8K_blk_mem_gen_mux;
 
 architecture STRUCTURE of BertErnie8K_blk_mem_gen_mux is
@@ -153,8 +151,6 @@ entity BertErnie8K_blk_mem_gen_prim_wrapper_init is
     dina : in STD_LOGIC_VECTOR ( 7 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of BertErnie8K_blk_mem_gen_prim_wrapper_init : entity is "blk_mem_gen_prim_wrapper_init";
 end BertErnie8K_blk_mem_gen_prim_wrapper_init;
 
 architecture STRUCTURE of BertErnie8K_blk_mem_gen_prim_wrapper_init is
@@ -666,8 +662,6 @@ entity BertErnie8K_blk_mem_gen_prim_width is
     dina : in STD_LOGIC_VECTOR ( 7 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of BertErnie8K_blk_mem_gen_prim_width : entity is "blk_mem_gen_prim_width";
 end BertErnie8K_blk_mem_gen_prim_width;
 
 architecture STRUCTURE of BertErnie8K_blk_mem_gen_prim_width is
@@ -720,8 +714,6 @@ entity BertErnie8K_blk_mem_gen_generic_cstr is
     dina : in STD_LOGIC_VECTOR ( 7 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of BertErnie8K_blk_mem_gen_generic_cstr : entity is "blk_mem_gen_generic_cstr";
 end BertErnie8K_blk_mem_gen_generic_cstr;
 
 architecture STRUCTURE of BertErnie8K_blk_mem_gen_generic_cstr is
@@ -763,8 +755,6 @@ entity BertErnie8K_blk_mem_gen_top is
     dina : in STD_LOGIC_VECTOR ( 7 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of BertErnie8K_blk_mem_gen_top : entity is "blk_mem_gen_top";
 end BertErnie8K_blk_mem_gen_top;
 
 architecture STRUCTURE of BertErnie8K_blk_mem_gen_top is
@@ -790,8 +780,6 @@ entity BertErnie8K_blk_mem_gen_v8_4_1_synth is
     dina : in STD_LOGIC_VECTOR ( 7 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of BertErnie8K_blk_mem_gen_v8_4_1_synth : entity is "blk_mem_gen_v8_4_1_synth";
 end BertErnie8K_blk_mem_gen_v8_4_1_synth;
 
 architecture STRUCTURE of BertErnie8K_blk_mem_gen_v8_4_1_synth is
@@ -1021,8 +1009,6 @@ entity BertErnie8K_blk_mem_gen_v8_4_1 is
   attribute C_WRITE_WIDTH_B of BertErnie8K_blk_mem_gen_v8_4_1 : entity is 8;
   attribute C_XDEVICEFAMILY : string;
   attribute C_XDEVICEFAMILY of BertErnie8K_blk_mem_gen_v8_4_1 : entity is "artix7";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of BertErnie8K_blk_mem_gen_v8_4_1 : entity is "blk_mem_gen_v8_4_1";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of BertErnie8K_blk_mem_gen_v8_4_1 : entity is "yes";
 end BertErnie8K_blk_mem_gen_v8_4_1;

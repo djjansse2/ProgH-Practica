@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
--- Date        : Wed Feb  6 20:06:45 2019
+-- Date        : Wed Feb  6 20:06:41 2019
 -- Host        : DESKTOP-I8VS7IB running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Practicum_01/Practicum_01.srcs/sources_1/ip/BertErnie8K/BertErnie8K_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top BertErnie8K -prefix
+--               BertErnie8K_ BertErnie8K_stub.vhdl
 -- Design      : BertErnie8K
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a35tcpg236-1
