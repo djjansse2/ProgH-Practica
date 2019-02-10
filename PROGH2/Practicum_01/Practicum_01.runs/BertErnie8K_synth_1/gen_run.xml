@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="BertErnie8K_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1549479695">
+<GenRun Id="BertErnie8K_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1549541638">
   <File Type="PA-TCL" Name="BertErnie8K.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="BertErnie8K_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="BertErnie8K_reports.tcl"/>

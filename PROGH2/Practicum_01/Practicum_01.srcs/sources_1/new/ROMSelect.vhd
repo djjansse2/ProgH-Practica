@@ -49,7 +49,7 @@ begin
   begin
 
     if rising_edge(clk) then
-        if(prescaler < 12850) then
+        if(prescaler < 12500) then
             enable <= '0';
             prescaler <= prescaler + 1;
         else

@@ -60,24 +60,27 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param xicom.use_bs_reader 1
+  set_param synth.incrementalSynthesisCache C:/Users/Kayne/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-16528-LAPTOP-HRAQ4RRP/incrSyn
   create_project -in_memory -part xc7a35tcpg236-1
   set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Practicum_01/Practicum_01.cache/wt [current_project]
-  set_property parent.project_path C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Practicum_01/Practicum_01.xpr [current_project]
-  set_property ip_output_repo C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Practicum_01/Practicum_01.cache/ip [current_project]
+  set_property webtalk.parent_dir D:/Documents/ProgH-Practica/PROGH2/Practicum_01/Practicum_01.cache/wt [current_project]
+  set_property parent.project_path D:/Documents/ProgH-Practica/PROGH2/Practicum_01/Practicum_01.xpr [current_project]
+  set_property ip_output_repo D:/Documents/ProgH-Practica/PROGH2/Practicum_01/Practicum_01.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_MEMORY [current_project]
-  add_files -quiet C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Practicum_01/Practicum_01.runs/synth_1/AudioGen.dcp
-  read_ip -quiet C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Practicum_01/Practicum_01.srcs/sources_1/ip/BertErnie8K/BertErnie8K.xci
-  read_xdc C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Practicum_01/Practicum_01.srcs/constrs_1/new/constraints.xdc
+  add_files -quiet D:/Documents/ProgH-Practica/PROGH2/Practicum_01/Practicum_01.runs/synth_1/AudioGen.dcp
+  read_ip -quiet D:/Documents/ProgH-Practica/PROGH2/Practicum_01/Practicum_01.srcs/sources_1/ip/BertErnie8K/BertErnie8K.xci
+  read_xdc D:/Documents/ProgH-Practica/PROGH2/Practicum_01/Practicum_01.srcs/constrs_1/new/constraints.xdc
   link_design -top AudioGen -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb
 } RESULT]
