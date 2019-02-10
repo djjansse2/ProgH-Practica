@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date             : Sun Feb 10 17:29:32 2019
-| Host             : DESKTOP-MV4G04O running 64-bit major release  (build 9200)
+| Date             : Sun Feb 10 17:53:00 2019
+| Host             : DESKTOP-I8VS7IB running 64-bit major release  (build 9200)
 | Command          : report_power -file KeyboardMain_power_routed.rpt -pb KeyboardMain_power_summary_routed.pb -rpx KeyboardMain_power_routed.rpx
 | Design           : KeyboardMain
 | Device           : xc7a35tcpg236-1
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 6.179        |
+| Total On-Chip Power (W)  | 9.143        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 6.082        |
-| Device Static (W)        | 0.098        |
+| Dynamic (W)              | 9.016        |
+| Device Static (W)        | 0.128        |
 | Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 54.1         |
-| Junction Temperature (C) | 55.9         |
+| Max Ambient (C)          | 39.3         |
+| Junction Temperature (C) | 70.7         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,16 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.396 |      385 |       --- |             --- |
-|   LUT as Logic |     0.292 |      126 |     20800 |            0.61 |
-|   CARRY4       |     0.069 |       46 |      8150 |            0.56 |
-|   Register     |     0.028 |      163 |     41600 |            0.39 |
+| Slice Logic    |     0.377 |      272 |       --- |             --- |
+|   LUT as Logic |     0.294 |       71 |     20800 |            0.34 |
+|   CARRY4       |     0.048 |       34 |      8150 |            0.42 |
+|   Register     |     0.029 |      131 |     41600 |            0.31 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
 |   Others       |     0.000 |        8 |       --- |             --- |
-| Signals        |     0.404 |      264 |       --- |             --- |
-| I/O            |     5.282 |       23 |       106 |           21.70 |
-| Static Power   |     0.098 |          |           |                 |
-| Total          |     6.179 |          |           |                 |
+| Signals        |     0.403 |      213 |       --- |             --- |
+| I/O            |     8.236 |       23 |       106 |           21.70 |
+| Static Power   |     0.128 |          |           |                 |
+| Total          |     9.143 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,9 +71,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.843 |       0.812 |      0.031 |
-| Vccaux    |       1.800 |     0.208 |       0.193 |      0.015 |
-| Vcco33    |       3.300 |     1.493 |       1.492 |      0.001 |
+| Vccint    |       1.000 |     0.847 |       0.792 |      0.056 |
+| Vccaux    |       1.800 |     0.319 |       0.301 |      0.018 |
+| Vcco33    |       3.300 |     2.329 |       2.328 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -138,11 +138,11 @@ Table of Contents
 +--------------+-----------+
 | Name         | Power (W) |
 +--------------+-----------+
-| KeyboardMain |     6.082 |
-|   Reader     |     0.255 |
-|     dbps2clk |     0.102 |
-|   SFM        |     0.128 |
-|   SegDriv    |     0.375 |
+| KeyboardMain |     9.016 |
+|   Reader     |     0.236 |
+|     dbps2clk |     0.104 |
+|   SFM        |     0.103 |
+|   SegDriv    |     0.398 |
 +--------------+-----------+
 
 

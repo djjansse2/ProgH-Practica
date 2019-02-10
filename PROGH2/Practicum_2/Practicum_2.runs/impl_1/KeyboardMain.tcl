@@ -60,7 +60,6 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
 
 start_step init_design
 set ACTIVE_STEP init_design
@@ -71,12 +70,12 @@ set rc [catch {
   set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.cache/wt [current_project]
-  set_property parent.project_path Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.xpr [current_project]
-  set_property ip_output_repo Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Practicum_2/Practicum_2.cache/wt [current_project]
+  set_property parent.project_path C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Practicum_2/Practicum_2.xpr [current_project]
+  set_property ip_output_repo C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Practicum_2/Practicum_2.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.runs/synth_1/KeyboardMain.dcp
-  read_xdc Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/constrs_1/new/constraint.xdc
+  add_files -quiet C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Practicum_2/Practicum_2.runs/synth_1/KeyboardMain.dcp
+  read_xdc C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Practicum_2/Practicum_2.srcs/constrs_1/new/constraint.xdc
   link_design -top KeyboardMain -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb
 } RESULT]

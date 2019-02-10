@@ -86,26 +86,70 @@ architecture Behavioral of StateMachine is
           when Hold =>
 
           if(tempVal /= "11110000") then
-            if (comp_vect > 5) then
-              comp_vect := 0;
-              tempTho <= tempHun;
-              tempHun <= tempTen;
-              tempTen <= tempUni;
-            end if;
-            comp_vect := comp_vect + 1;
+            -- if (comp_vect > 5) then
+              -- comp_vect := 0;
+              -- tempTho <= tempHun;
+              -- tempHun <= tempTen;
+              -- tempTen <= tempUni;
+            -- end if;
+            -- comp_vect := comp_vect + 1;
 
             case tempVal is
-              when "01000101" => tempUni <= "0000";
-              when "00010110" => tempUni <= "0001";
-              when "00011110" => tempUni <= "0010";
-              when "00100110" => tempUni <= "0011";
-              when "00100101" => tempUni <= "0100";
-              when "00101110" => tempUni <= "0101";
-              when "00110110" => tempUni <= "0110";
-              when "00111101" => tempUni <= "0111";
-              when "00111110" => tempUni <= "1000";
-              when "01000110" => tempUni <= "1001";
-              when others => tempUni <= "1111";
+              when "01000101" =>
+                tempTho <= tempHun;
+                tempHun <= tempTen;
+                tempTen <= tempUni;
+                tempUni <= "0000";
+              when "00010110" =>
+                tempTho <= tempHun;
+                tempHun <= tempTen;
+                tempTen <= tempUni;
+                tempUni <= "0001";
+              when "00011110" =>
+                tempTho <= tempHun;
+                tempHun <= tempTen;
+                tempTen <= tempUni;
+                tempUni <= "0010";
+              when "00100110" =>
+                tempTho <= tempHun;
+                tempHun <= tempTen;
+                tempTen <= tempUni;
+                tempUni <= "0011";
+              when "00100101" =>
+                tempTho <= tempHun;
+                tempHun <= tempTen;
+                tempTen <= tempUni;
+                tempUni <= "0100";
+              when "00101110" =>
+                tempTho <= tempHun;
+                tempHun <= tempTen;
+                tempTen <= tempUni;
+                tempUni <= "0101";
+              when "00110110" =>
+                tempTho <= tempHun;
+                tempHun <= tempTen;
+                tempTen <= tempUni;
+                tempUni <= "0110";
+              when "00111101" =>
+                tempTho <= tempHun;
+                tempHun <= tempTen;
+                tempTen <= tempUni;
+                tempUni <= "0111";
+              when "00111110" =>
+                tempTho <= tempHun;
+                tempHun <= tempTen;
+                tempTen <= tempUni;
+                tempUni <= "1000";
+              when "01000110" =>
+                tempTho <= tempHun;
+                tempHun <= tempTen;
+                tempTen <= tempUni;
+                tempUni <= "1001";
+              when others =>
+                tempTho <= tempTho;
+                tempHun <= tempHun;
+                tempTen <= tempTen;
+                tempUni <= tempUni;
             end case;
           else
             tempTho <= tempTho;
