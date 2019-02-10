@@ -32,6 +32,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity PS2Reader is
+  GENERIC(
+  clk_freq              : INTEGER := 10_000_000; --system clock frequency in Hz
+  debounce_counter_size : INTEGER := 9);
   Port (
   clk : in STD_LOGIC;
   psclk : in STD_LOGIC;
@@ -41,49 +44,72 @@ entity PS2Reader is
 end PS2Reader;
 
 architecture Behavioral of PS2Reader is
+
+  component debounce is
+    generic(
+    counter_size : INTEGER);
+    port(
+    clk    : in  STD_LOGIC;
+    din : in  STD_LOGIC;
+    result : out STD_LOGIC);
+  end component;
+
   signal shift_reg : STD_LOGIC_VECTOR(10 downto 0) := (others => '0');
-  --signal sync : STD_LOGIC_VECTOR(2 downto 0) := (others => '0');
-  --signal prevsync : STD_LOGIC := '1';
   signal dcount : integer;
   signal pserror : STD_LOGIC;
+
+  signal rpsclk: std_logic; --raw ps clk
+  signal rpsdin: std_logic; --raw ps din
+
+  signal fpsclk: std_logic; --Flipflopped ps clk
+  signal fpsdin: std_logic; --Flipflopped ps din
   begin
 
+    --debouncers
+    dbps2clk: debounce
+    GENERIC MAP(counter_size => debounce_counter_size)
+    PORT MAP(clk => clk, din => rpsclk, result => fpsclk);
+    dbps2din: debounce
+    GENERIC MAP(counter_size => debounce_counter_size)
+    PORT MAP(clk => clk, din => rpsdin, result => fpsdin);
+
+
+    --sanity check
     pserror <= NOT (NOT shift_reg(0) AND shift_reg(10) AND (shift_reg(9) XOR shift_reg(8) XOR
     shift_reg(7) XOR shift_reg(6) XOR shift_reg(5) XOR shift_reg(4) XOR shift_reg(3) XOR
     shift_reg(2) XOR shift_reg(1)));
 
+
+    process (clk)
+    begin
+      if (rising_edge(clk)) THEN
+        rpsclk <= psclk;
+        rpsdin <= psdin;
+    end if;
+    end process;
+
     process (psclk)
     begin
-      if (falling_edge(psclk)) then
-        shift_reg(10) <= psdin;
-        shift_reg(9) <= shift_reg(10);
-        shift_reg(8) <= shift_reg(9);
-        shift_reg(7) <= shift_reg(8);
-        shift_reg(6) <= shift_reg(7);
-        shift_reg(5) <= shift_reg(6);
-        shift_reg(4) <= shift_reg(5);
-        shift_reg(3) <= shift_reg(4);
-        shift_reg(2) <= shift_reg(3);
-        shift_reg(1) <= shift_reg(2);
-        shift_reg(0) <= shift_reg(1);
+      if (falling_edge(fpsclk)) then
+        shift_reg <= psdin & shift_reg(10 downto 1);
       end if;
-  end process;
+    end process;
 
-  process (clk)
-  begin
-    if (rising_edge(clk)) then
-      if(psclk = '0') then
-        dcount <= 0;
-      elsif(dcount /= 100000000/18_000) then
-        dcount <= dcount + 1;
-      end if;
+    process (clk, psclk)
+    begin
+      if (rising_edge(clk)) then
+        if(fpsclk = '0') then
+          dcount <= dcount + 1;
+        elsif (dcount /= clk_freq/18_000) then
+          dcount <= 0;
+        end if;
 
-      if(dcount = 100000000/18_000 AND pserror = '0' AND psclk = '1') then
-        psdone <= '1';
-        psdout <= shift_reg (8 downto 1);
-      else
-        psdone <= '0';
+        if(dcount = clk_freq/18_000 AND pserror = '0') then
+          psdone <= '1';
+          psdout <= shift_reg (8 downto 1);
+        else
+          psdone <= '0';
+        end if;
       end if;
-    end if;
-  end process;
-end Behavioral;
+    end process;
+  end Behavioral;
