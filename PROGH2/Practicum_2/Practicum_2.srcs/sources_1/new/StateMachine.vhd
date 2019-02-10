@@ -86,14 +86,6 @@ architecture Behavioral of StateMachine is
           when Hold =>
 
           if(tempVal /= "11110000") then
-            -- if (comp_vect > 5) then
-              -- comp_vect := 0;
-              -- tempTho <= tempHun;
-              -- tempHun <= tempTen;
-              -- tempTen <= tempUni;
-            -- end if;
-            -- comp_vect := comp_vect + 1;
-
             case tempVal is
               when "01000101" =>
                 tempTho <= tempHun;

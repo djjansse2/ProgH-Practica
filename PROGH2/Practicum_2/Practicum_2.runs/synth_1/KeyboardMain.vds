@@ -2,8 +2,8 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Sun Feb 10 17:51:18 2019
-# Process ID: 1968
+# Start of session at: Sun Feb 10 18:26:00 2019
+# Process ID: 20528
 # Current directory: C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Practicum_2/Practicum_2.runs/synth_1
 # Command line: vivado.exe -log KeyboardMain.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source KeyboardMain.tcl
 # Log file: C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Practicum_2/Practicum_2.runs/synth_1/KeyboardMain.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 7008 
+INFO: Helper process launched with PID 24856 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 345.074 ; gain = 100.328
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 345.020 ; gain = 100.277
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'KeyboardMain' [C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/KeyboardMain.vhd:44]
 INFO: [Synth 8-3491] module 'PS2Reader' declared at 'C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/PS2Reader.vhd:34' bound to instance 'Reader' of component 'PS2Reader' [C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/KeyboardMain.vhd:85]
@@ -48,7 +48,7 @@ WARNING: [Synth 8-614] signal 'tempTho' is read in the process but is not in the
 INFO: [Synth 8-256] done synthesizing module 'StateMachine' (4#1) [C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/StateMachine.vhd:44]
 INFO: [Synth 8-256] done synthesizing module 'KeyboardMain' (5#1) [C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/KeyboardMain.vhd:44]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 397.508 ; gain = 152.762
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 397.883 ; gain = 153.141
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -58,7 +58,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 397.508 ; gain = 152.762
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 397.883 ; gain = 153.141
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -74,29 +74,29 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 724.480 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 724.438 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 724.480 ; gain = 479.734
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 724.438 ; gain = 479.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 724.480 ; gain = 479.734
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 724.438 ; gain = 479.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 724.480 ; gain = 479.734
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 724.438 ; gain = 479.695
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-6014] Unused sequential element counter_out_reg was removed.  [C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/Debounce.vhd:50]
 WARNING: [Synth 8-6014] Unused sequential element dcount_reg was removed.  [C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/PS2Reader.vhd:102]
 WARNING: [Synth 8-6014] Unused sequential element divCnt_reg was removed.  [C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/Segmentdriver.vhd:61]
 INFO: [Synth 8-5546] ROM "tempTho" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 724.480 ; gain = 479.734
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 724.438 ; gain = 479.695
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -209,7 +209,7 @@ WARNING: [Synth 8-3332] Sequential element (Reader/dbps2din/counter_out_reg[2]) 
 WARNING: [Synth 8-3332] Sequential element (Reader/dbps2din/counter_out_reg[1]) is unused and will be removed from module KeyboardMain.
 WARNING: [Synth 8-3332] Sequential element (Reader/dbps2din/counter_out_reg[0]) is unused and will be removed from module KeyboardMain.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 724.480 ; gain = 479.734
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 724.438 ; gain = 479.695
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -221,13 +221,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 724.480 ; gain = 479.734
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 724.438 ; gain = 479.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 724.480 ; gain = 479.734
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 724.438 ; gain = 479.695
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -239,7 +239,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 742.746 ; gain = 498.000
+Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 743.719 ; gain = 498.977
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -263,7 +263,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 742.746 ; gain = 498.000
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 743.719 ; gain = 498.977
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -276,7 +276,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 742.746 ; gain = 498.000
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 743.719 ; gain = 498.977
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -288,25 +288,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 742.746 ; gain = 498.000
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 743.719 ; gain = 498.977
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 742.746 ; gain = 498.000
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 743.719 ; gain = 498.977
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 742.746 ; gain = 498.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 743.719 ; gain = 498.977
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 742.746 ; gain = 498.000
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 743.719 ; gain = 498.977
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -347,11 +347,11 @@ Report Instance Areas:
 |5     |  SegDriv    |Segmentdriver |   105|
 +------+-------------+--------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 742.746 ; gain = 498.000
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 743.719 ; gain = 498.977
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 21 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 742.746 ; gain = 171.027
-Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 742.746 ; gain = 498.000
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:28 . Memory (MB): peak = 743.719 ; gain = 172.422
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 743.719 ; gain = 498.977
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 37 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -363,8 +363,8 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 29 Infos, 29 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 744.750 ; gain = 513.141
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:38 . Memory (MB): peak = 744.348 ; gain = 512.742
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Practicum_2/Practicum_2.runs/synth_1/KeyboardMain.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file KeyboardMain_utilization_synth.rpt -pb KeyboardMain_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 744.750 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sun Feb 10 17:51:59 2019...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 744.348 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Feb 10 18:26:44 2019...
