@@ -48,10 +48,15 @@ architecture Behavioral of StateMachine is
   SIGNAL nextState : State := Idle;
 
   SIGNAL tempVal : STD_LOGIC_VECTOR(7 downto 0);
+
+  SIGNAL holdUni : STD_LOGIC_VECTOR(3 downto 0) := "1111";
+
   SIGNAL tempUni : STD_LOGIC_VECTOR(3 downto 0) := "1111";
   SIGNAL tempTen : STD_LOGIC_VECTOR(3 downto 0) := "1111";
   SIGNAL tempHun : STD_LOGIC_VECTOR(3 downto 0) := "1111";
   SIGNAL tempTho : STD_LOGIC_VECTOR(3 downto 0) := "1111";
+
+  Signal mongol : std_logic;
 
   begin
     process(clk)
@@ -78,71 +83,29 @@ architecture Behavioral of StateMachine is
             nextState <= curState;
           end if;
 
-          tempTho <= tempTho;
-          tempHun <= tempHun;
-          tempTen <= tempTen;
-          tempUni <= tempUni;
-
           when Hold =>
-
           if(tempVal /= "11110000") then
             case tempVal is
-              when "01000101" =>
-                tempTho <= tempHun;
-                tempHun <= tempTen;
-                tempTen <= tempUni;
-                tempUni <= "0000";
-              when "00010110" =>
-                tempTho <= tempHun;
-                tempHun <= tempTen;
-                tempTen <= tempUni;
-                tempUni <= "0001";
-              when "00011110" =>
-                tempTho <= tempHun;
-                tempHun <= tempTen;
-                tempTen <= tempUni;
-                tempUni <= "0010";
-              when "00100110" =>
-                tempTho <= tempHun;
-                tempHun <= tempTen;
-                tempTen <= tempUni;
-                tempUni <= "0011";
-              when "00100101" =>
-                tempTho <= tempHun;
-                tempHun <= tempTen;
-                tempTen <= tempUni;
-                tempUni <= "0100";
-              when "00101110" =>
-                tempTho <= tempHun;
-                tempHun <= tempTen;
-                tempTen <= tempUni;
-                tempUni <= "0101";
-              when "00110110" =>
-                tempTho <= tempHun;
-                tempHun <= tempTen;
-                tempTen <= tempUni;
-                tempUni <= "0110";
-              when "00111101" =>
-                tempTho <= tempHun;
-                tempHun <= tempTen;
-                tempTen <= tempUni;
-                tempUni <= "0111";
-              when "00111110" =>
-                tempTho <= tempHun;
-                tempHun <= tempTen;
-                tempTen <= tempUni;
-                tempUni <= "1000";
-              when "01000110" =>
-                tempTho <= tempHun;
-                tempHun <= tempTen;
-                tempTen <= tempUni;
-                tempUni <= "1001";
+              when "01000101" =>holdUni <= "0000";
+              when "00010110" =>holdUni <= "0001";
+              when "00011110" =>holdUni <= "0010";
+              when "00100110" =>holdUni <= "0011";
+              when "00100101" =>holdUni <= "0100";
+              when "00101110" =>holdUni <= "0101";
+              when "00110110" =>holdUni <= "0110";
+              when "00111101" =>holdUni <= "0111";
+              when "00111110" =>holdUni <= "1000";
+              when "01000110" =>holdUni <= "1001";
               when others =>
-                tempTho <= tempTho;
-                tempHun <= tempHun;
-                tempTen <= tempTen;
-                tempUni <= tempUni;
+              holdUni <= "1111";
             end case;
+            mongol <= not mongol;
+            if (holdUni /= "1111") then
+              tempTho <= tempHun;
+              tempHun <= tempTen;
+              tempTen <= tempUni;
+              tempUni <= holdUni;
+            end if;
           else
             tempTho <= tempTho;
             tempHun <= tempHun;
@@ -155,6 +118,7 @@ architecture Behavioral of StateMachine is
           else
             nextState <= curState;
           end if;
+          
         end case;
       end if;
 
