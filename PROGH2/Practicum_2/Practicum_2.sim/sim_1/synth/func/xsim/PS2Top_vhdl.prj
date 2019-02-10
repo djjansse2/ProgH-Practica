@@ -1,0 +1,8 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"PS2Top_func_synth.vhd" \
+"../../../../../Practicum_2.srcs/sources_1/new/PS2Reader.vhd" \
+"../../../../../Practicum_2.srcs/sources_1/new/PS2Top.vhd" \
+
+# Do not sort compile order
+nosort

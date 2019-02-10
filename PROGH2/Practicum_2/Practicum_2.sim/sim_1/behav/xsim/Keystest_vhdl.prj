@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Practicum_2.srcs/sources_1/new/PS2Reader.vhd" \
+"../../../../Practicum_2.srcs/sources_1/new/Keystest.vhd" \
+
+# Do not sort compile order
+nosort
