@@ -40,10 +40,10 @@ entity PS2Reader is
   psdone : out STD_LOGIC);
 end PS2Reader;
 
-architecture Behavioral of PS2Reader is 
+architecture Behavioral of PS2Reader is
   signal shift_reg : STD_LOGIC_VECTOR(10 downto 0) := (others => '0');
-  signal sync : STD_LOGIC_VECTOR(2 downto 0) := (others => '0');
-  signal prevsync : STD_LOGIC := '1';
+  --signal sync : STD_LOGIC_VECTOR(2 downto 0) := (others => '0');
+  --signal prevsync : STD_LOGIC := '1';
   signal dcount : integer;
   signal pserror : STD_LOGIC;
   begin

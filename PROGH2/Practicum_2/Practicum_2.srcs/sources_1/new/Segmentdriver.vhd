@@ -53,7 +53,7 @@ architecture Behavioral of Segmentdriver is
     process(clk)
     variable selcnt            : INTEGER range 0 to 4 := 0;
     variable divCnt        : INTEGER := 0;
-    variable tempBCD        : std_logic_vector(3 downto 0) := "0000";
+    variable tempBCD        : std_logic_vector(3 downto 0) := "1111";
     variable tempSegm       : std_logic_vector(6 downto 0) := "0000000";
 
     begin
@@ -86,7 +86,7 @@ architecture Behavioral of Segmentdriver is
             when "1100" => tempSegm := "0110001"; -- C
             when "1101" => tempSegm := "1000010"; -- d
             when "1110" => tempSegm := "0110000"; -- E
-            when "1111" => tempSegm := "0111000"; -- F
+            when "1111" => tempSegm := "1111111"; -- F / OUT
           end case;
 
           segmentOut <= tempSegm;
