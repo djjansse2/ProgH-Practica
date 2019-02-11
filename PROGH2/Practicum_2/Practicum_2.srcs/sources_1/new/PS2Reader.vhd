@@ -34,7 +34,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity PS2Reader is
   GENERIC(
   clk_freq              : INTEGER := 10_000_000; --system clock frequency in Hz
-  debounce_counter_size : INTEGER := 9);
+  debounce_counter_size : INTEGER := 10);
   Port (
   clk : in STD_LOGIC;
   psclk : in STD_LOGIC;
@@ -55,7 +55,7 @@ architecture Behavioral of PS2Reader is
   end component;
 
   signal shift_reg : STD_LOGIC_VECTOR(10 downto 0) := (others => '0');
-  signal dcount : integer;
+  signal dcount : INTEGER RANGE 0 TO clk_freq/18_000;
   signal pserror : STD_LOGIC;
 
   signal rpsclk: std_logic; --raw ps clk
@@ -88,23 +88,25 @@ architecture Behavioral of PS2Reader is
     end if;
     end process;
 
-    process (psclk)
+    process (fpsclk)
     begin
       if (falling_edge(fpsclk)) then
-        shift_reg <= psdin & shift_reg(10 downto 1);
+        shift_reg <= fpsdin & shift_reg(10 downto 1);
       end if;
     end process;
 
-    process (clk, psclk)
+    process (clk)
     begin
       if (rising_edge(clk)) then
+
         if(fpsclk = '0') then
-          dcount <= dcount + 1;
+
+dcount <= dcount + 1;
         elsif (dcount /= clk_freq/18_000) then
           dcount <= 0;
         end if;
 
-        if(dcount = clk_freq/18_000 AND pserror = '0') then
+        if(dcount >= clk_freq/18_000 AND pserror = '0') then
           psdone <= '1';
           psdout <= shift_reg (8 downto 1);
         else
