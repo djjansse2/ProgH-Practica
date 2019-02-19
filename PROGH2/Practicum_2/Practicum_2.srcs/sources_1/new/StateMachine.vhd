@@ -111,10 +111,7 @@ architecture Behavioral of StateMachine is
                 end if;
               end if;
               mongol <= not mongol;
-
-
             else
-
               tempTho <= tempTho;
               tempHun <= tempHun;
               tempTen <= tempTen;
@@ -134,7 +131,7 @@ architecture Behavioral of StateMachine is
             nextState <= curState;
           end if;
 
-         
+
         end case;
       end if;
 

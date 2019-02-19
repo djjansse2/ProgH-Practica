@@ -2,11 +2,11 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Mon Feb 11 01:23:38 2019
-# Process ID: 86932
+# Start of session at: Tue Feb 12 01:02:46 2019
+# Process ID: 89548
 # Current directory: Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.runs/impl_1
-# Command line: vivado.exe -log KeyboardMain.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source KeyboardMain.tcl -notrace
-# Log file: Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.runs/impl_1/KeyboardMain.vdi
+# Command line: vivado.exe -log PS2Reader.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source PS2Reader.tcl -notrace
+# Log file: Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.runs/impl_1/PS2Reader.vdi
 # Journal file: Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
-source KeyboardMain.tcl -notrace
+source PS2Reader.tcl -notrace

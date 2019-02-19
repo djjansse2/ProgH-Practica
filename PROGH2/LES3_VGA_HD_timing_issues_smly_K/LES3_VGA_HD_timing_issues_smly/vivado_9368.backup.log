@@ -1,0 +1,440 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed Jan 16 19:01:23 2019
+# Process ID: 9368
+# Current directory: C:/Progh/VGA_HD
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9952 C:\Progh\VGA_HD\VGA_HD.xpr
+# Log file: C:/Progh/VGA_HD/vivado.log
+# Journal file: C:/Progh/VGA_HD\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Progh/VGA_HD/VGA_HD.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:06 . Memory (MB): peak = 894.203 ; gain = 203.484
+update_compile_order -fileset sources_1
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_gen_0 -dir c:/Progh/VGA_HD/VGA_HD.srcs/sources_1/ip
+set_property -dict [list CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {10000} CONFIG.Read_Width_A {12} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/ip/smly100.coe} CONFIG.Fill_Remaining_Memory_Locations {false} CONFIG.Port_A_Write_Rate {0}] [get_ips blk_mem_gen_0]
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Progh/VGA_HD/VGA_HD.srcs/sources_1/ip/smly100.coe' provided. It will be converted relative to IP Instance files '../smly100.coe'
+generate_target {instantiation_template} [get_files c:/Progh/VGA_HD/VGA_HD.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_gen_0'...
+update_compile_order -fileset sources_1
+generate_target all [get_files  c:/Progh/VGA_HD/VGA_HD.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_gen_0'...
+catch { config_ip_cache -export [get_ips -all blk_mem_gen_0] }
+export_ip_user_files -of_objects [get_files c:/Progh/VGA_HD/VGA_HD.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Progh/VGA_HD/VGA_HD.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci]
+launch_runs -jobs 8 blk_mem_gen_0_synth_1
+[Wed Jan 16 19:14:48 2019] Launched blk_mem_gen_0_synth_1...
+Run output will be captured here: C:/Progh/VGA_HD/VGA_HD.runs/blk_mem_gen_0_synth_1/runme.log
+export_simulation -of_objects [get_files c:/Progh/VGA_HD/VGA_HD.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci] -directory C:/Progh/VGA_HD/VGA_HD.ip_user_files/sim_scripts -ip_user_files_dir C:/Progh/VGA_HD/VGA_HD.ip_user_files -ipstatic_source_dir C:/Progh/VGA_HD/VGA_HD.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Progh/VGA_HD/VGA_HD.cache/compile_simlib/modelsim} {questa=C:/Progh/VGA_HD/VGA_HD.cache/compile_simlib/questa} {riviera=C:/Progh/VGA_HD/VGA_HD.cache/compile_simlib/riviera} {activehdl=C:/Progh/VGA_HD/VGA_HD.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+import_files -norecurse {{C:/Users/jlgheuve/Documents/Werkmap/2018-2019/Periode 3/PROGH2/Opdrachten/Uiterkingen opdrachten/Vivado projecten/LES5_VGA_square_HD/LES5_VGA_square.srcs/sources_1/imports/Les_3_VGA/Sprite.vhd}}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a35tcpg236-1
+Top: TOP
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1275.918 ; gain = 112.504
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'TOP' [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/new/TOP.vhd:41]
+INFO: [Synth 8-3491] module 'VGA' declared at 'C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/imports/Les_3_VGA/vga.vhd:23' bound to instance 'VIDEO' of component 'VGA' [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/new/TOP.vhd:70]
+INFO: [Synth 8-638] synthesizing module 'VGA' [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/imports/Les_3_VGA/vga.vhd:33]
+INFO: [Synth 8-256] done synthesizing module 'VGA' (1#1) [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/imports/Les_3_VGA/vga.vhd:33]
+INFO: [Synth 8-3491] module 'Clk_148' declared at 'C:/Progh/VGA_HD/.Xil/Vivado-9368-NB170210/realtime/Clk_148_stub.vhdl:5' bound to instance 'Clock' of component 'clk_148' [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/new/TOP.vhd:71]
+INFO: [Synth 8-638] synthesizing module 'Clk_148' [C:/Progh/VGA_HD/.Xil/Vivado-9368-NB170210/realtime/Clk_148_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'Sprite' declared at 'C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/imports/Les_3_VGA/Sprite.vhd:32' bound to instance 'Sprt' of component 'Sprite' [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/new/TOP.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'Sprite' [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/imports/Les_3_VGA/Sprite.vhd:41]
+WARNING: [Synth 8-3848] Net hSpriteLoc in module/entity Sprite does not have driver. [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/imports/Les_3_VGA/Sprite.vhd:58]
+WARNING: [Synth 8-3848] Net vSpriteLoc in module/entity Sprite does not have driver. [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/imports/Les_3_VGA/Sprite.vhd:59]
+INFO: [Synth 8-256] done synthesizing module 'Sprite' (2#1) [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/imports/Les_3_VGA/Sprite.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'TOP' (3#1) [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/new/TOP.vhd:41]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 1315.613 ; gain = 152.199
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 1315.613 ; gain = 152.199
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Progh/VGA_HD/VGA_HD.srcs/sources_1/ip/Clk_148/Clk_148.dcp' for cell 'Clock'
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.4
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Progh/VGA_HD/VGA_HD.srcs/sources_1/ip/Clk_148/Clk_148_board.xdc] for cell 'Clock/inst'
+Finished Parsing XDC File [c:/Progh/VGA_HD/VGA_HD.srcs/sources_1/ip/Clk_148/Clk_148_board.xdc] for cell 'Clock/inst'
+Parsing XDC File [c:/Progh/VGA_HD/VGA_HD.srcs/sources_1/ip/Clk_148/Clk_148.xdc] for cell 'Clock/inst'
+Finished Parsing XDC File [c:/Progh/VGA_HD/VGA_HD.srcs/sources_1/ip/Clk_148/Clk_148.xdc] for cell 'Clock/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Progh/VGA_HD/VGA_HD.srcs/sources_1/ip/Clk_148/Clk_148.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/TOP_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/TOP_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [C:/Progh/VGA_HD/VGA_HD.srcs/constrs_1/new/cnts.xdc]
+CRITICAL WARNING: [Common 17-69] Command failed: Site cannot be assigned to more than one port [C:/Progh/VGA_HD/VGA_HD.srcs/constrs_1/new/cnts.xdc:9]
+CRITICAL WARNING: [Common 17-69] Command failed: Site cannot be assigned to more than one port [C:/Progh/VGA_HD/VGA_HD.srcs/constrs_1/new/cnts.xdc:11]
+CRITICAL WARNING: [Common 17-69] Command failed: Site cannot be assigned to more than one port [C:/Progh/VGA_HD/VGA_HD.srcs/constrs_1/new/cnts.xdc:12]
+Finished Parsing XDC File [C:/Progh/VGA_HD/VGA_HD.srcs/constrs_1/new/cnts.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:25 ; elapsed = 00:00:16 . Memory (MB): peak = 1461.563 ; gain = 298.148
+19 Infos, 2 Warnings, 3 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:16 . Memory (MB): peak = 1461.563 ; gain = 299.133
+refresh_design
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Progh/VGA_HD/VGA_HD.srcs/sources_1/ip/Clk_148/Clk_148_board.xdc] for cell 'Clock/inst'
+Finished Parsing XDC File [c:/Progh/VGA_HD/VGA_HD.srcs/sources_1/ip/Clk_148/Clk_148_board.xdc] for cell 'Clock/inst'
+Parsing XDC File [c:/Progh/VGA_HD/VGA_HD.srcs/sources_1/ip/Clk_148/Clk_148.xdc] for cell 'Clock/inst'
+Finished Parsing XDC File [c:/Progh/VGA_HD/VGA_HD.srcs/sources_1/ip/Clk_148/Clk_148.xdc] for cell 'Clock/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Progh/VGA_HD/VGA_HD.srcs/sources_1/ip/Clk_148/Clk_148.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/TOP_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/TOP_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [C:/Progh/VGA_HD/VGA_HD.srcs/constrs_1/new/cnts.xdc]
+CRITICAL WARNING: [Common 17-69] Command failed: Site cannot be assigned to more than one port [C:/Progh/VGA_HD/VGA_HD.srcs/constrs_1/new/cnts.xdc:9]
+CRITICAL WARNING: [Common 17-69] Command failed: Site cannot be assigned to more than one port [C:/Progh/VGA_HD/VGA_HD.srcs/constrs_1/new/cnts.xdc:11]
+CRITICAL WARNING: [Common 17-69] Command failed: Site cannot be assigned to more than one port [C:/Progh/VGA_HD/VGA_HD.srcs/constrs_1/new/cnts.xdc:12]
+Finished Parsing XDC File [C:/Progh/VGA_HD/VGA_HD.srcs/constrs_1/new/cnts.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:06 . Memory (MB): peak = 1496.414 ; gain = 0.000
+refresh_design
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Progh/VGA_HD/VGA_HD.srcs/sources_1/ip/Clk_148/Clk_148_board.xdc] for cell 'Clock/inst'
+Finished Parsing XDC File [c:/Progh/VGA_HD/VGA_HD.srcs/sources_1/ip/Clk_148/Clk_148_board.xdc] for cell 'Clock/inst'
+Parsing XDC File [c:/Progh/VGA_HD/VGA_HD.srcs/sources_1/ip/Clk_148/Clk_148.xdc] for cell 'Clock/inst'
+Finished Parsing XDC File [c:/Progh/VGA_HD/VGA_HD.srcs/sources_1/ip/Clk_148/Clk_148.xdc] for cell 'Clock/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Progh/VGA_HD/VGA_HD.srcs/sources_1/ip/Clk_148/Clk_148.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/TOP_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/TOP_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [C:/Progh/VGA_HD/VGA_HD.srcs/constrs_1/new/cnts.xdc]
+Finished Parsing XDC File [C:/Progh/VGA_HD/VGA_HD.srcs/constrs_1/new/cnts.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 1496.414 ; gain = 0.000
+set_property IOSTANDARD LVCMOS33 [get_ports [list {red[3]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {red[3]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {Backcolor[1]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {red[1]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {green[3]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {blue[3]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {Backcolor[2]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {green[2]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {blue[2]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {green[1]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {blue[1]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {red[2]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {green[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {Backcolor[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {blue[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {red[0]}]]
+place_ports {Backcolor[0]} R2
+place_ports {Backcolor[1]} T1
+place_ports {Backcolor[2]} U1
+place_ports {blue[0]} N18
+place_ports {blue[1]} L18
+place_ports {blue[2]} K18
+place_ports {blue[3]} J18
+place_ports {green[0]} J17
+place_ports {green[1]} H17
+place_ports {green[2]} G17
+place_ports {green[3]} D17
+place_ports {red[0]} G19
+place_ports {red[1]} H19
+place_ports {red[2]} J19
+place_ports {red[3]} N19
+save_constraints
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Wed Jan 16 19:47:42 2019] Launched synth_1...
+Run output will be captured here: C:/Progh/VGA_HD/VGA_HD.runs/synth_1/runme.log
+[Wed Jan 16 19:47:42 2019] Launched impl_1...
+Run output will be captured here: C:/Progh/VGA_HD/VGA_HD.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2017.4
+  **** Build date : Dec 15 2017-21:08:27
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A28281A
+set_property PROGRAM.FILE {C:/Progh/VGA_HD/VGA_HD.runs/impl_1/TOP.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Progh/VGA_HD/VGA_HD.runs/impl_1/TOP.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 2075.887 ; gain = 23.367
+---------------------------------------------------------------------------------
+ERROR: [Synth 8-2029] formal douta has no actual or default value [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/new/TOP.vhd:84]
+INFO: [Synth 8-994] douta is declared here [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/new/TOP.vhd:64]
+INFO: [Synth 8-2810] unit behavioral ignored due to previous errors [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/new/TOP.vhd:41]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 2108.305 ; gain = 55.785
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+refresh_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 2108.383 ; gain = 55.863
+ERROR: [Common 17-39] 'refresh_design' failed due to earlier errors.
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2128.785 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'TOP' [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/new/TOP.vhd:41]
+INFO: [Synth 8-3491] module 'VGA' declared at 'C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/imports/Les_3_VGA/vga.vhd:23' bound to instance 'VIDEO' of component 'VGA' [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/new/TOP.vhd:82]
+INFO: [Synth 8-638] synthesizing module 'VGA' [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/imports/Les_3_VGA/vga.vhd:33]
+INFO: [Synth 8-256] done synthesizing module 'VGA' (1#1) [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/imports/Les_3_VGA/vga.vhd:33]
+INFO: [Synth 8-3491] module 'Clk_148' declared at 'C:/Progh/VGA_HD/.Xil/Vivado-9368-NB170210/realtime/Clk_148_stub.vhdl:5' bound to instance 'Clock' of component 'clk_148' [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/new/TOP.vhd:83]
+INFO: [Synth 8-638] synthesizing module 'Clk_148' [C:/Progh/VGA_HD/.Xil/Vivado-9368-NB170210/realtime/Clk_148_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'Sprite' declared at 'C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/imports/Les_3_VGA/Sprite.vhd:32' bound to instance 'Sprt' of component 'Sprite' [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/new/TOP.vhd:84]
+ERROR: [Synth 8-3493] module 'sprite' declared at 'C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/imports/Les_3_VGA/Sprite.vhd:32' does not have matching formal port for component port 'addra' [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/new/TOP.vhd:84]
+ERROR: [Synth 8-3493] module 'sprite' declared at 'C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/imports/Les_3_VGA/Sprite.vhd:32' does not have matching formal port for component port 'douta' [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/new/TOP.vhd:84]
+INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'C:/Progh/VGA_HD/.Xil/Vivado-9368-NB170210/realtime/blk_mem_gen_0_stub.vhdl:5' bound to instance 'ROM' of component 'blk_mem_gen_0' [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/new/TOP.vhd:85]
+ERROR: [Synth 8-285] failed synthesizing module 'TOP' [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/new/TOP.vhd:41]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2133.496 ; gain = 4.711
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+refresh_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:15 . Memory (MB): peak = 2133.574 ; gain = 7.754
+ERROR: [Common 17-39] 'refresh_design' failed due to earlier errors.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183A28281A
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2142.105 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'TOP' [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/new/TOP.vhd:41]
+INFO: [Synth 8-3491] module 'VGA' declared at 'C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/imports/Les_3_VGA/vga.vhd:23' bound to instance 'VIDEO' of component 'VGA' [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/new/TOP.vhd:82]
+INFO: [Synth 8-638] synthesizing module 'VGA' [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/imports/Les_3_VGA/vga.vhd:33]
+INFO: [Synth 8-256] done synthesizing module 'VGA' (1#1) [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/imports/Les_3_VGA/vga.vhd:33]
+INFO: [Synth 8-3491] module 'Clk_148' declared at 'C:/Progh/VGA_HD/.Xil/Vivado-9368-NB170210/realtime/Clk_148_stub.vhdl:5' bound to instance 'Clock' of component 'clk_148' [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/new/TOP.vhd:83]
+INFO: [Synth 8-638] synthesizing module 'Clk_148' [C:/Progh/VGA_HD/.Xil/Vivado-9368-NB170210/realtime/Clk_148_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'Sprite' declared at 'C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/imports/Les_3_VGA/Sprite.vhd:32' bound to instance 'Sprt' of component 'Sprite' [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/new/TOP.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'Sprite' [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/imports/Les_3_VGA/Sprite.vhd:43]
+WARNING: [Synth 8-3848] Net hSpriteLoc in module/entity Sprite does not have driver. [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/imports/Les_3_VGA/Sprite.vhd:60]
+WARNING: [Synth 8-3848] Net vSpriteLoc in module/entity Sprite does not have driver. [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/imports/Les_3_VGA/Sprite.vhd:61]
+WARNING: [Synth 8-3848] Net addra in module/entity Sprite does not have driver. [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/imports/Les_3_VGA/Sprite.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'Sprite' (2#1) [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/imports/Les_3_VGA/Sprite.vhd:43]
+INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'C:/Progh/VGA_HD/.Xil/Vivado-9368-NB170210/realtime/blk_mem_gen_0_stub.vhdl:5' bound to instance 'ROM' of component 'blk_mem_gen_0' [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/new/TOP.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [C:/Progh/VGA_HD/.Xil/Vivado-9368-NB170210/realtime/blk_mem_gen_0_stub.vhdl:14]
+ERROR: [Synth 8-549] port width mismatch for port 'addra': port width = 14, actual width = 12 [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/new/TOP.vhd:85]
+ERROR: [Synth 8-549] port width mismatch for port 'douta': port width = 12, actual width = 14 [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/new/TOP.vhd:85]
+ERROR: [Synth 8-285] failed synthesizing module 'TOP' [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/new/TOP.vhd:41]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2142.105 ; gain = 0.000
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+refresh_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 2142.105 ; gain = 1.367
+ERROR: [Common 17-39] 'refresh_design' failed due to earlier errors.
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2145.602 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'TOP' [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/new/TOP.vhd:41]
+INFO: [Synth 8-3491] module 'VGA' declared at 'C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/imports/Les_3_VGA/vga.vhd:23' bound to instance 'VIDEO' of component 'VGA' [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/new/TOP.vhd:82]
+INFO: [Synth 8-638] synthesizing module 'VGA' [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/imports/Les_3_VGA/vga.vhd:33]
+INFO: [Synth 8-256] done synthesizing module 'VGA' (1#1) [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/imports/Les_3_VGA/vga.vhd:33]
+INFO: [Synth 8-3491] module 'Clk_148' declared at 'C:/Progh/VGA_HD/.Xil/Vivado-9368-NB170210/realtime/Clk_148_stub.vhdl:5' bound to instance 'Clock' of component 'clk_148' [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/new/TOP.vhd:83]
+INFO: [Synth 8-638] synthesizing module 'Clk_148' [C:/Progh/VGA_HD/.Xil/Vivado-9368-NB170210/realtime/Clk_148_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'Sprite' declared at 'C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/imports/Les_3_VGA/Sprite.vhd:32' bound to instance 'Sprt' of component 'Sprite' [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/new/TOP.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'Sprite' [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/imports/Les_3_VGA/Sprite.vhd:43]
+WARNING: [Synth 8-3848] Net hSpriteLoc in module/entity Sprite does not have driver. [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/imports/Les_3_VGA/Sprite.vhd:60]
+WARNING: [Synth 8-3848] Net vSpriteLoc in module/entity Sprite does not have driver. [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/imports/Les_3_VGA/Sprite.vhd:61]
+WARNING: [Synth 8-3848] Net addra in module/entity Sprite does not have driver. [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/imports/Les_3_VGA/Sprite.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'Sprite' (2#1) [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/imports/Les_3_VGA/Sprite.vhd:43]
+INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'C:/Progh/VGA_HD/.Xil/Vivado-9368-NB170210/realtime/blk_mem_gen_0_stub.vhdl:5' bound to instance 'ROM' of component 'blk_mem_gen_0' [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/new/TOP.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [C:/Progh/VGA_HD/.Xil/Vivado-9368-NB170210/realtime/blk_mem_gen_0_stub.vhdl:14]
+INFO: [Synth 8-256] done synthesizing module 'TOP' (3#1) [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/new/TOP.vhd:41]
+WARNING: [Synth 8-3331] design Sprite has unconnected port addra[13]
+WARNING: [Synth 8-3331] design Sprite has unconnected port addra[12]
+WARNING: [Synth 8-3331] design Sprite has unconnected port addra[11]
+WARNING: [Synth 8-3331] design Sprite has unconnected port addra[10]
+WARNING: [Synth 8-3331] design Sprite has unconnected port addra[9]
+WARNING: [Synth 8-3331] design Sprite has unconnected port addra[8]
+WARNING: [Synth 8-3331] design Sprite has unconnected port addra[7]
+WARNING: [Synth 8-3331] design Sprite has unconnected port addra[6]
+WARNING: [Synth 8-3331] design Sprite has unconnected port addra[5]
+WARNING: [Synth 8-3331] design Sprite has unconnected port addra[4]
+WARNING: [Synth 8-3331] design Sprite has unconnected port addra[3]
+WARNING: [Synth 8-3331] design Sprite has unconnected port addra[2]
+WARNING: [Synth 8-3331] design Sprite has unconnected port addra[1]
+WARNING: [Synth 8-3331] design Sprite has unconnected port addra[0]
+WARNING: [Synth 8-3331] design Sprite has unconnected port dina[11]
+WARNING: [Synth 8-3331] design Sprite has unconnected port dina[10]
+WARNING: [Synth 8-3331] design Sprite has unconnected port dina[9]
+WARNING: [Synth 8-3331] design Sprite has unconnected port dina[8]
+WARNING: [Synth 8-3331] design Sprite has unconnected port dina[7]
+WARNING: [Synth 8-3331] design Sprite has unconnected port dina[6]
+WARNING: [Synth 8-3331] design Sprite has unconnected port dina[5]
+WARNING: [Synth 8-3331] design Sprite has unconnected port dina[4]
+WARNING: [Synth 8-3331] design Sprite has unconnected port dina[3]
+WARNING: [Synth 8-3331] design Sprite has unconnected port dina[2]
+WARNING: [Synth 8-3331] design Sprite has unconnected port dina[1]
+WARNING: [Synth 8-3331] design Sprite has unconnected port dina[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2145.602 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2145.602 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Progh/VGA_HD/VGA_HD.srcs/sources_1/ip/Clk_148/Clk_148.dcp' for cell 'Clock'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Progh/VGA_HD/VGA_HD.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.dcp' for cell 'ROM'
+INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.4
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Progh/VGA_HD/VGA_HD.srcs/sources_1/ip/Clk_148/Clk_148_board.xdc] for cell 'Clock/inst'
+Finished Parsing XDC File [c:/Progh/VGA_HD/VGA_HD.srcs/sources_1/ip/Clk_148/Clk_148_board.xdc] for cell 'Clock/inst'
+Parsing XDC File [c:/Progh/VGA_HD/VGA_HD.srcs/sources_1/ip/Clk_148/Clk_148.xdc] for cell 'Clock/inst'
+Finished Parsing XDC File [c:/Progh/VGA_HD/VGA_HD.srcs/sources_1/ip/Clk_148/Clk_148.xdc] for cell 'Clock/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Progh/VGA_HD/VGA_HD.srcs/sources_1/ip/Clk_148/Clk_148.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/TOP_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/TOP_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [C:/Progh/VGA_HD/VGA_HD.srcs/constrs_1/new/cnts.xdc]
+Finished Parsing XDC File [C:/Progh/VGA_HD/VGA_HD.srcs/constrs_1/new/cnts.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 2159.688 ; gain = 14.621
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2159.688 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'TOP' [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/new/TOP.vhd:41]
+INFO: [Synth 8-3491] module 'VGA' declared at 'C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/imports/Les_3_VGA/vga.vhd:23' bound to instance 'VIDEO' of component 'VGA' [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/new/TOP.vhd:82]
+INFO: [Synth 8-638] synthesizing module 'VGA' [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/imports/Les_3_VGA/vga.vhd:33]
+INFO: [Synth 8-256] done synthesizing module 'VGA' (1#1) [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/imports/Les_3_VGA/vga.vhd:33]
+INFO: [Synth 8-3491] module 'Clk_148' declared at 'C:/Progh/VGA_HD/.Xil/Vivado-9368-NB170210/realtime/Clk_148_stub.vhdl:5' bound to instance 'Clock' of component 'clk_148' [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/new/TOP.vhd:83]
+INFO: [Synth 8-638] synthesizing module 'Clk_148' [C:/Progh/VGA_HD/.Xil/Vivado-9368-NB170210/realtime/Clk_148_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'Sprite' declared at 'C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/imports/Les_3_VGA/Sprite.vhd:36' bound to instance 'Sprt' of component 'Sprite' [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/new/TOP.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'Sprite' [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/imports/Les_3_VGA/Sprite.vhd:47]
+WARNING: [Synth 8-3848] Net hSpriteLoc in module/entity Sprite does not have driver. [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/imports/Les_3_VGA/Sprite.vhd:64]
+WARNING: [Synth 8-3848] Net vSpriteLoc in module/entity Sprite does not have driver. [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/imports/Les_3_VGA/Sprite.vhd:65]
+INFO: [Synth 8-256] done synthesizing module 'Sprite' (2#1) [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/imports/Les_3_VGA/Sprite.vhd:47]
+INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'C:/Progh/VGA_HD/.Xil/Vivado-9368-NB170210/realtime/blk_mem_gen_0_stub.vhdl:5' bound to instance 'ROM' of component 'blk_mem_gen_0' [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/new/TOP.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [C:/Progh/VGA_HD/.Xil/Vivado-9368-NB170210/realtime/blk_mem_gen_0_stub.vhdl:14]
+INFO: [Synth 8-256] done synthesizing module 'TOP' (3#1) [C:/Progh/VGA_HD/VGA_HD.srcs/sources_1/new/TOP.vhd:41]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2159.688 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2159.688 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Progh/VGA_HD/VGA_HD.srcs/sources_1/ip/Clk_148/Clk_148.dcp' for cell 'Clock'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Progh/VGA_HD/VGA_HD.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.dcp' for cell 'ROM'
+INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.4
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Progh/VGA_HD/VGA_HD.srcs/sources_1/ip/Clk_148/Clk_148_board.xdc] for cell 'Clock/inst'
+Finished Parsing XDC File [c:/Progh/VGA_HD/VGA_HD.srcs/sources_1/ip/Clk_148/Clk_148_board.xdc] for cell 'Clock/inst'
+Parsing XDC File [c:/Progh/VGA_HD/VGA_HD.srcs/sources_1/ip/Clk_148/Clk_148.xdc] for cell 'Clock/inst'
+Finished Parsing XDC File [c:/Progh/VGA_HD/VGA_HD.srcs/sources_1/ip/Clk_148/Clk_148.xdc] for cell 'Clock/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Progh/VGA_HD/VGA_HD.srcs/sources_1/ip/Clk_148/Clk_148.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/TOP_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/TOP_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [C:/Progh/VGA_HD/VGA_HD.srcs/constrs_1/new/cnts.xdc]
+Finished Parsing XDC File [C:/Progh/VGA_HD/VGA_HD.srcs/constrs_1/new/cnts.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 2190.488 ; gain = 30.801
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Thu Jan 17 09:08:18 2019] Launched synth_1...
+Run output will be captured here: C:/Progh/VGA_HD/VGA_HD.runs/synth_1/runme.log
+[Thu Jan 17 09:08:18 2019] Launched impl_1...
+Run output will be captured here: C:/Progh/VGA_HD/VGA_HD.runs/impl_1/runme.log
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A38948A
+INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0_1]
+set_property PROGRAM.FILE {C:/Progh/VGA_HD/VGA_HD.runs/impl_1/TOP.bit} [get_hw_devices xc7a35t_0_1]
+program_hw_devices [get_hw_devices xc7a35t_0_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0_1] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183A38948A

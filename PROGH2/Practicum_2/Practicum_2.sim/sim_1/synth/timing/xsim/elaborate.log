@@ -1,0 +1,16 @@
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto aa221eb3d3ed41d892f053c09d375621 --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot PS2Top_time_synth -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.PS2Top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+INFO: [XSIM 43-3451] SDF backannotation process started with SDF file "PS2Top_time_synth.sdf", for root module "PS2Top".
+INFO: [XSIM 43-3452] SDF backannotation was successful for SDF file "PS2Top_time_synth.sdf", for root module "PS2Top".
+Time Resolution for simulation is 1ps
+Compiling module simprims_ver.OBUF
+Compiling module simprims_ver.OBUFT
+Compiling module xil_defaultlib.PS2Top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot PS2Top_time_synth

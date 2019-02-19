@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1549844560">
-  <File Type="PA-TCL" Name="KeyboardMain.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="KeyboardMain_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="KeyboardMain_reports.tcl"/>
-  <File Type="RDS-RDS" Name="KeyboardMain.vds"/>
-  <File Type="RDS-UTIL" Name="KeyboardMain_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="KeyboardMain_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="KeyboardMain.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="KeyboardMain_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="KeyboardMain_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1549929704">
+  <File Type="PA-TCL" Name="PS2Reader.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="PS2Reader_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="PS2Reader_reports.tcl"/>
+  <File Type="RDS-RDS" Name="PS2Reader.vds"/>
+  <File Type="RDS-UTIL" Name="PS2Reader_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="PS2Reader_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="PS2Reader.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="PS2Reader_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="PS2Reader_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/PS2Reader.vhd">
@@ -57,7 +57,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="KeyboardMain"/>
+      <Option Name="TopModule" Val="PS2Reader"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

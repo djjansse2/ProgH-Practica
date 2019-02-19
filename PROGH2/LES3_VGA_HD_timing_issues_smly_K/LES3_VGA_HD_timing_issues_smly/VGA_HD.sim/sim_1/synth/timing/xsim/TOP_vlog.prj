@@ -1,0 +1,6 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../VGA_HD.srcs/sources_1/ip/Clk_148" \
+"TOP_time_synth.v" \
+
+# Do not sort compile order
+nosort
