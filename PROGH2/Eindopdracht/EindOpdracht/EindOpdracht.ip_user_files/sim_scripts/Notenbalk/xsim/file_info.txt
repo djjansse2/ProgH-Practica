@@ -1,0 +1,2 @@
+Notenbalk.v,verilog,xil_defaultlib,../../../../EindOpdracht.srcs/sources_1/ip/Notenbalk/sim/Notenbalk.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

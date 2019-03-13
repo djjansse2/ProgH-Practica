@@ -1,0 +1,30 @@
+12:22:00 INFO  : Registering command handlers for SDK TCF services
+12:22:05 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\Daniel\Documents\ProgH-Practica\PROGH2\blinky\blinky.sdk\temp_xsdb_launch_script.tcl
+12:25:06 ERROR : Timed out. 180 seconds have elapsed while waiting for XSCT server to launch.
+12:25:07 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\Daniel\Documents\ProgH-Practica\PROGH2\blinky\blinky.sdk\temp_xsdb_launch_script.tcl
+12:28:07 ERROR : Timed out. 180 seconds have elapsed while waiting for XSCT server to launch.
+12:28:07 ERROR : Failed to call init_repo
+Reason: xsct server communication channel is not established.
+12:28:07 ERROR : Exception raised in executing the command =Failed to call init_repo
+Reason: xsct server communication channel is not established. 
+12:28:07 INFO  : Processing command line option -hwspec C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/blinky/blinky.sdk/design_1_wrapper.hdf.
+12:28:08 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\Daniel\Documents\ProgH-Practica\PROGH2\blinky\blinky.sdk\temp_xsdb_launch_script.tcl
+12:31:08 ERROR : Timed out. 180 seconds have elapsed while waiting for XSCT server to launch.
+12:31:08 ERROR : Failed to openhw "C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/blinky/blinky.sdk/design_1_wrapper_hw_platform_0/system.hdf"
+Reason: xsct server communication channel is not established.
+12:31:08 ERROR : Unable to create Hardware Specification Project with specification file: C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/blinky/blinky.sdk/design_1_wrapper.hdf
+12:39:45 INFO  : Registering command handlers for SDK TCF services
+12:39:46 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\Daniel\Documents\ProgH-Practica\PROGH2\blinky\blinky.sdk\temp_xsdb_launch_script.tcl
+12:42:46 ERROR : Timed out. 180 seconds have elapsed while waiting for XSCT server to launch.
+12:42:46 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\Daniel\Documents\ProgH-Practica\PROGH2\blinky\blinky.sdk\temp_xsdb_launch_script.tcl
+12:45:46 ERROR : Timed out. 180 seconds have elapsed while waiting for XSCT server to launch.
+12:45:46 ERROR : Failed to call init_repo
+Reason: xsct server communication channel is not established.
+12:45:46 ERROR : Exception raised in executing the command =Failed to call init_repo
+Reason: xsct server communication channel is not established. 
+12:45:46 INFO  : Processing command line option -hwspec C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/blinky/blinky.sdk/design_1_wrapper.hdf.
+12:45:46 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\Daniel\Documents\ProgH-Practica\PROGH2\blinky\blinky.sdk\temp_xsdb_launch_script.tcl
+12:48:46 ERROR : Timed out. 180 seconds have elapsed while waiting for XSCT server to launch.
+12:48:46 ERROR : Failed to openhw "C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/blinky/blinky.sdk/design_1_wrapper_hw_platform_1/system.hdf"
+Reason: xsct server communication channel is not established.
+12:48:46 ERROR : Unable to create Hardware Specification Project with specification file: C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/blinky/blinky.sdk/design_1_wrapper.hdf
