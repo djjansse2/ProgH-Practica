@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Mon Jan 21 17:20:53 2019
+# Process ID: 4336
+# Current directory: C:/Progh/VGA_HD_wekend_smly
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12092 C:\Progh\VGA_HD_wekend_smly\VGA_HD.xpr
+# Log file: C:/Progh/VGA_HD_wekend_smly/vivado.log
+# Journal file: C:/Progh/VGA_HD_wekend_smly\vivado.jou
+#-----------------------------------------------------------
+start_gui

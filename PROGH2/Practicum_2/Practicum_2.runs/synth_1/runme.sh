@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log KeyboardMain.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source KeyboardMain.tcl
+EAStep vivado -log PS2Reader.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source PS2Reader.tcl

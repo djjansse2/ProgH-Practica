@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Mon Jan 21 16:18:45 2019
+# Process ID: 12940
+# Current directory: C:/Users/jlgheuve/Documents/Werkmap/2018-2019/Periode 3/PROGH2/Opdrachten/Uiterkingen opdrachten/Vivado projecten/VGA_HD_timing_issues_smly/VGA_HD.runs/Clk_148_synth_1
+# Command line: vivado.exe -log Clk_148.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Clk_148.tcl
+# Log file: C:/Users/jlgheuve/Documents/Werkmap/2018-2019/Periode 3/PROGH2/Opdrachten/Uiterkingen opdrachten/Vivado projecten/VGA_HD_timing_issues_smly/VGA_HD.runs/Clk_148_synth_1/Clk_148.vds
+# Journal file: C:/Users/jlgheuve/Documents/Werkmap/2018-2019/Periode 3/PROGH2/Opdrachten/Uiterkingen opdrachten/Vivado projecten/VGA_HD_timing_issues_smly/VGA_HD.runs/Clk_148_synth_1\vivado.jou
+#-----------------------------------------------------------
+source Clk_148.tcl -notrace
