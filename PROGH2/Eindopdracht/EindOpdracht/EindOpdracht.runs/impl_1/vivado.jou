@@ -2,11 +2,11 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Wed Mar 13 12:33:44 2019
-# Process ID: 3432
-# Current directory: C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.runs/impl_1
+# Start of session at: Thu Mar 14 16:26:21 2019
+# Process ID: 2112
+# Current directory: D:/FPGA/ProgH-Practicum/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.runs/impl_1
 # Command line: vivado.exe -log MainGame.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source MainGame.tcl -notrace
-# Log file: C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.runs/impl_1/MainGame.vdi
-# Journal file: C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.runs/impl_1\vivado.jou
+# Log file: D:/FPGA/ProgH-Practicum/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.runs/impl_1/MainGame.vdi
+# Journal file: D:/FPGA/ProgH-Practicum/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
 source MainGame.tcl -notrace

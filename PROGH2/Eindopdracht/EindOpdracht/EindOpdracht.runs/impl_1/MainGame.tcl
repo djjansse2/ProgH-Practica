@@ -70,16 +70,16 @@ set rc [catch {
   set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.cache/wt [current_project]
-  set_property parent.project_path C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.xpr [current_project]
-  set_property ip_output_repo C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.cache/ip [current_project]
+  set_property webtalk.parent_dir D:/FPGA/ProgH-Practicum/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.cache/wt [current_project]
+  set_property parent.project_path D:/FPGA/ProgH-Practicum/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.xpr [current_project]
+  set_property ip_output_repo D:/FPGA/ProgH-Practicum/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
-  add_files -quiet C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.runs/synth_1/MainGame.dcp
-  read_ip -quiet C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.srcs/sources_1/ip/Notenbalk/Notenbalk.xci
-  read_ip -quiet C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.srcs/sources_1/ip/Muzieknoot/Muzieknoot.xci
-  read_ip -quiet C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.srcs/sources_1/ip/Pixel_Clock/Pixel_Clock.xci
-  read_xdc C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.srcs/constrs_1/new/constraints.xdc
+  add_files -quiet D:/FPGA/ProgH-Practicum/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.runs/synth_1/MainGame.dcp
+  read_ip -quiet D:/FPGA/ProgH-Practicum/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.srcs/sources_1/ip/Notenbalk/Notenbalk.xci
+  read_ip -quiet D:/FPGA/ProgH-Practicum/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.srcs/sources_1/ip/Muzieknoot/Muzieknoot.xci
+  read_ip -quiet D:/FPGA/ProgH-Practicum/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.srcs/sources_1/ip/Pixel_Clock/Pixel_Clock.xci
+  read_xdc D:/FPGA/ProgH-Practicum/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.srcs/constrs_1/new/constraints.xdc
   link_design -top MainGame -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb
 } RESULT]

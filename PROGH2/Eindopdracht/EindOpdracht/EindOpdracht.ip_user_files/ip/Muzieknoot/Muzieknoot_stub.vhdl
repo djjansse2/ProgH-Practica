@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
 -- Date        : Tue Mar  5 14:46:40 2019
 -- Host        : DESKTOP-I8VS7IB running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               c:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.srcs/sources_1/ip/Muzieknoot/Muzieknoot_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top Muzieknoot -prefix
+--               Muzieknoot_ Muzieknoot_stub.vhdl
 -- Design      : Muzieknoot
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a35tcpg236-1

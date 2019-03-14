@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-// Date        : Fri Mar  8 13:07:47 2019
-// Host        : DESKTOP-I8VS7IB running 64-bit major release  (build 9200)
+// Date        : Thu Mar 14 16:25:32 2019
+// Host        : LAPTOP-HRAQ4RRP running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               c:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.srcs/sources_1/ip/Pixel_Clock/Pixel_Clock_sim_netlist.v
+//               D:/FPGA/ProgH-Practicum/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.srcs/sources_1/ip/Pixel_Clock/Pixel_Clock_sim_netlist.v
 // Design      : Pixel_Clock
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -15,36 +15,43 @@
 (* NotValidForBitStream *)
 module Pixel_Clock
    (clk_out1,
+    clk_out2,
     clk_in1);
   output clk_out1;
+  output clk_out2;
   input clk_in1;
 
   (* IBUF_LOW_PWR *) wire clk_in1;
   wire clk_out1;
+  wire clk_out2;
 
   Pixel_Clock_Pixel_Clock_clk_wiz inst
        (.clk_in1(clk_in1),
-        .clk_out1(clk_out1));
+        .clk_out1(clk_out1),
+        .clk_out2(clk_out2));
 endmodule
 
 (* ORIG_REF_NAME = "Pixel_Clock_clk_wiz" *) 
 module Pixel_Clock_Pixel_Clock_clk_wiz
    (clk_out1,
+    clk_out2,
     clk_in1);
   output clk_out1;
+  output clk_out2;
   input clk_in1;
 
   wire clk_in1;
   wire clk_in1_Pixel_Clock;
   wire clk_out1;
   wire clk_out1_Pixel_Clock;
+  wire clk_out2;
+  wire clk_out2_Pixel_Clock;
   wire clkfbout_Pixel_Clock;
   wire clkfbout_buf_Pixel_Clock;
   wire NLW_mmcm_adv_inst_CLKFBOUTB_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKFBSTOPPED_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT0B_UNCONNECTED;
-  wire NLW_mmcm_adv_inst_CLKOUT1_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT2_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED;
@@ -76,18 +83,22 @@ module Pixel_Clock_Pixel_Clock_clk_wiz
        (.I(clk_out1_Pixel_Clock),
         .O(clk_out1));
   (* BOX_TYPE = "PRIMITIVE" *) 
+  BUFG clkout2_buf
+       (.I(clk_out2_Pixel_Clock),
+        .O(clk_out2));
+  (* BOX_TYPE = "PRIMITIVE" *) 
   MMCME2_ADV #(
     .BANDWIDTH("OPTIMIZED"),
-    .CLKFBOUT_MULT_F(37.125000),
+    .CLKFBOUT_MULT_F(11.875000),
     .CLKFBOUT_PHASE(0.000000),
     .CLKFBOUT_USE_FINE_PS("FALSE"),
     .CLKIN1_PERIOD(10.000000),
     .CLKIN2_PERIOD(0.000000),
-    .CLKOUT0_DIVIDE_F(6.250000),
+    .CLKOUT0_DIVIDE_F(8.000000),
     .CLKOUT0_DUTY_CYCLE(0.500000),
     .CLKOUT0_PHASE(0.000000),
     .CLKOUT0_USE_FINE_PS("FALSE"),
-    .CLKOUT1_DIVIDE(1),
+    .CLKOUT1_DIVIDE(4),
     .CLKOUT1_DUTY_CYCLE(0.500000),
     .CLKOUT1_PHASE(0.000000),
     .CLKOUT1_USE_FINE_PS("FALSE"),
@@ -113,7 +124,7 @@ module Pixel_Clock_Pixel_Clock_clk_wiz
     .CLKOUT6_PHASE(0.000000),
     .CLKOUT6_USE_FINE_PS("FALSE"),
     .COMPENSATION("ZHOLD"),
-    .DIVCLK_DIVIDE(4),
+    .DIVCLK_DIVIDE(1),
     .IS_CLKINSEL_INVERTED(1'b0),
     .IS_PSEN_INVERTED(1'b0),
     .IS_PSINCDEC_INVERTED(1'b0),
@@ -136,7 +147,7 @@ module Pixel_Clock_Pixel_Clock_clk_wiz
         .CLKINSTOPPED(NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED),
         .CLKOUT0(clk_out1_Pixel_Clock),
         .CLKOUT0B(NLW_mmcm_adv_inst_CLKOUT0B_UNCONNECTED),
-        .CLKOUT1(NLW_mmcm_adv_inst_CLKOUT1_UNCONNECTED),
+        .CLKOUT1(clk_out2_Pixel_Clock),
         .CLKOUT1B(NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED),
         .CLKOUT2(NLW_mmcm_adv_inst_CLKOUT2_UNCONNECTED),
         .CLKOUT2B(NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED),

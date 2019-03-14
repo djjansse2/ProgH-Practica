@@ -41,7 +41,8 @@ architecture Behavioral of MainGame is
 
     component Pixel_Clock is
         Port (  clk_in1 : in STD_LOGIC;
-                clk_out1 : out STD_LOGIC );
+                clk_out1 : out STD_LOGIC;
+                clk_out2 : out STD_LOGIC );
     end component;
 
     component vga is
@@ -75,6 +76,7 @@ architecture Behavioral of MainGame is
     end component;
 
     SIGNAL spixclk : STD_LOGIC;
+    SIGNAL smemclk : STD_LOGIC;
     SIGNAL vcounts, hcounts : STD_LOGIC_VECTOR(10 downto 0);
     SIGNAL NBAdds : STD_LOGIC_VECTOR (19 downto 0);
     SIGNAL NBDatas : STD_LOGIC_VECTOR (0 downto 0);
@@ -84,10 +86,10 @@ architecture Behavioral of MainGame is
 
 begin
 
-    pix_clk : Pixel_Clock port map ( clk_in1 => sysclk, clk_out1 => spixclk );
+    pix_clk : Pixel_Clock port map ( clk_in1 => sysclk, clk_out1 => spixclk, clk_out2 => smemclk );
     graphics : vga port map ( Pixel_clk => spixclk, dataIn => vgadatas, red => VGAR, green => VGAG, blue => VGAB, hsync => hsync, vsync => vsync, hcounto => hcounts, vcounto => vcounts );
-    NB : Notenbalk port map ( addra => NBAdds, clka => sysclk, douta => NBDatas);
-    MN : Muzieknoot port map ( addra => MNAdds, clka => sysclk, douta => MNDatas);
+    NB : Notenbalk port map ( addra => NBAdds, clka => smemclk, douta => NBDatas);
+    MN : Muzieknoot port map ( addra => MNAdds, clka => smemclk, douta => MNDatas);
     sprite : spriterenderer port map ( pixclk => spixclk, hcount => hcounts, vcount => vcounts, dataInB => NBDatas, dataInN => MNDatas, dataOut => vgadatas, dataAddN => MNAdds, dataAddB => NBAdds);
 
 end Behavioral;

@@ -55,7 +55,8 @@
 --  Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase
 --   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 ------------------------------------------------------------------------------
--- clk_out1___148.500______0.000______50.0______217.614____245.344
+-- clk_out1___148.438______0.000______50.0______108.254_____87.466
+-- clk_out2___296.875______0.000______50.0_______95.401_____87.466
 --
 ------------------------------------------------------------------------------
 -- Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -70,6 +71,7 @@ port
  (-- Clock in ports
   -- Clock out ports
   clk_out1          : out    std_logic;
+  clk_out2          : out    std_logic;
   clk_in1           : in     std_logic
  );
 end component;
@@ -82,6 +84,7 @@ your_instance_name : Pixel_Clock
    port map ( 
   -- Clock out ports  
    clk_out1 => clk_out1,
+   clk_out2 => clk_out2,
    -- Clock in ports
    clk_in1 => clk_in1
  );

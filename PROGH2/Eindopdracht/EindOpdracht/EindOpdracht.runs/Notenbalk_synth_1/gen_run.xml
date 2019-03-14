@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="Notenbalk_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1551793306">
+<GenRun Id="Notenbalk_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1552575637">
   <File Type="PA-TCL" Name="Notenbalk.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="Notenbalk_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="Notenbalk_reports.tcl"/>
   <File Type="RDS-RDS" Name="Notenbalk.vds"/>
   <File Type="RDS-UTIL" Name="Notenbalk_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="Notenbalk_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="Notenbalk.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="Notenbalk_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="Notenbalk_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Notenbalk">
     <File Path="$PSRCDIR/sources_1/ip/Notenbalk/Notenbalk.xci">
       <FileInfo>

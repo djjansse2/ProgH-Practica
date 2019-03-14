@@ -23,31 +23,31 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.cache/wt [current_project]
-set_property parent.project_path C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.xpr [current_project]
+set_property webtalk.parent_dir D:/FPGA/ProgH-Practicum/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.cache/wt [current_project]
+set_property parent.project_path D:/FPGA/ProgH-Practicum/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
-set_property ip_output_repo c:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.cache/ip [current_project]
+set_property ip_output_repo d:/FPGA/ProgH-Practicum/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-add_files {{C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Eindopdracht/Bijlage Eindopdracht/notenbalk.coe}}
-add_files {{C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Eindopdracht/Bijlage Eindopdracht/muzieknoot.coe}}
+add_files {{D:/FPGA/ProgH-Practicum/PROGH2/Eindopdracht/Bijlage Eindopdracht/notenbalk.coe}}
+add_files {{D:/FPGA/ProgH-Practicum/PROGH2/Eindopdracht/Bijlage Eindopdracht/muzieknoot.coe}}
 read_vhdl -library xil_defaultlib {
-  C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.srcs/sources_1/new/spriterenderer.vhd
-  C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.srcs/sources_1/new/vga.vhd
-  C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.srcs/sources_1/new/MainGame.vhd
+  D:/FPGA/ProgH-Practicum/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.srcs/sources_1/new/spriterenderer.vhd
+  D:/FPGA/ProgH-Practicum/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.srcs/sources_1/new/vga.vhd
+  D:/FPGA/ProgH-Practicum/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.srcs/sources_1/new/MainGame.vhd
 }
-read_ip -quiet C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.srcs/sources_1/ip/Notenbalk/Notenbalk.xci
-set_property used_in_implementation false [get_files -all c:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.srcs/sources_1/ip/Notenbalk/Notenbalk_ooc.xdc]
+read_ip -quiet D:/FPGA/ProgH-Practicum/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.srcs/sources_1/ip/Notenbalk/Notenbalk.xci
+set_property used_in_implementation false [get_files -all d:/FPGA/ProgH-Practicum/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.srcs/sources_1/ip/Notenbalk/Notenbalk_ooc.xdc]
 
-read_ip -quiet C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.srcs/sources_1/ip/Muzieknoot/Muzieknoot.xci
-set_property used_in_implementation false [get_files -all c:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.srcs/sources_1/ip/Muzieknoot/Muzieknoot_ooc.xdc]
+read_ip -quiet D:/FPGA/ProgH-Practicum/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.srcs/sources_1/ip/Muzieknoot/Muzieknoot.xci
+set_property used_in_implementation false [get_files -all d:/FPGA/ProgH-Practicum/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.srcs/sources_1/ip/Muzieknoot/Muzieknoot_ooc.xdc]
 
-read_ip -quiet C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.srcs/sources_1/ip/Pixel_Clock/Pixel_Clock.xci
-set_property used_in_implementation false [get_files -all c:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.srcs/sources_1/ip/Pixel_Clock/Pixel_Clock_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.srcs/sources_1/ip/Pixel_Clock/Pixel_Clock.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.srcs/sources_1/ip/Pixel_Clock/Pixel_Clock_ooc.xdc]
+read_ip -quiet D:/FPGA/ProgH-Practicum/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.srcs/sources_1/ip/Pixel_Clock/Pixel_Clock.xci
+set_property used_in_implementation false [get_files -all d:/FPGA/ProgH-Practicum/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.srcs/sources_1/ip/Pixel_Clock/Pixel_Clock_board.xdc]
+set_property used_in_implementation false [get_files -all d:/FPGA/ProgH-Practicum/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.srcs/sources_1/ip/Pixel_Clock/Pixel_Clock.xdc]
+set_property used_in_implementation false [get_files -all d:/FPGA/ProgH-Practicum/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.srcs/sources_1/ip/Pixel_Clock/Pixel_Clock_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -57,8 +57,8 @@ set_property used_in_implementation false [get_files -all c:/Users/Daniel/Docume
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.srcs/constrs_1/new/constraints.xdc
-set_property used_in_implementation false [get_files C:/Users/Daniel/Documents/ProgH-Practica/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.srcs/constrs_1/new/constraints.xdc]
+read_xdc D:/FPGA/ProgH-Practicum/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.srcs/constrs_1/new/constraints.xdc
+set_property used_in_implementation false [get_files D:/FPGA/ProgH-Practicum/PROGH2/Eindopdracht/EindOpdracht/EindOpdracht.srcs/constrs_1/new/constraints.xdc]
 
 
 synth_design -top MainGame -part xc7a35tcpg236-1

@@ -42,12 +42,14 @@ architecture Behavioral of VGA is
   constant V_backporch: integer := 36;			--vertical back porch width in rows
   constant V_total_pixels: integer := (V_pixels + V_frontporch + V_syncwidth + V_backporch);
   constant V_sync_polarity: STD_LOGIC := '1';	--vertical sync pulse polarity (1 = positive, 0 = negative)
+  
+  
+  SIGNAL hcount    :    INTEGER RANGE 0 TO H_total_pixels - 1 := 0;  --horizontal counter (counts the columns)
+  SIGNAL vcount    :    INTEGER RANGE 0 TO V_total_pixels - 1 := 0;  --vertical counter (counts the rows)
 
 begin
 
 process (Pixel_clk)
-    VARIABLE hcount	:	INTEGER RANGE 0 TO H_total_pixels - 1 := 0;  --horizontal counter (counts the columns)
-	VARIABLE vcount	:	INTEGER RANGE 0 TO V_total_pixels - 1 := 0;  --vertical counter (counts the rows)
 begin
 
     hcounto <= STD_LOGIC_VECTOR(to_unsigned(hcount, 11));
@@ -78,16 +80,16 @@ begin
         vsync <= (not V_sync_polarity);
       end if;
 	  -- horizontal pixel counter
-      hcount := hcount + 1;
+      hcount <= hcount + 1;
 
       if hcount = (H_total_pixels - 1) then
 	  -- vertical line counter
-        vcount := vcount + 1;
-        hcount := 0;
+        vcount <= vcount + 1;
+        hcount <= 0;
       end if;
 
       if vcount = (V_total_pixels -1) then
-        vcount := 0;
+        vcount <= 0;
       end if;
 	 end if;
 end process;
