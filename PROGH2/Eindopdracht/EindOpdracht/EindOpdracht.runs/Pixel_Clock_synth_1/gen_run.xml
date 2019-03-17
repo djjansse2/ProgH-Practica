@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="Pixel_Clock_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1552046743">
+<GenRun Id="Pixel_Clock_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1552818161">
   <File Type="PA-TCL" Name="Pixel_Clock.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="Pixel_Clock_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="Pixel_Clock_reports.tcl"/>
   <File Type="RDS-RDS" Name="Pixel_Clock.vds"/>
   <File Type="RDS-UTIL" Name="Pixel_Clock_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="Pixel_Clock_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="Pixel_Clock.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="Pixel_Clock_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="Pixel_Clock_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Pixel_Clock">
     <File Path="$PSRCDIR/sources_1/ip/Pixel_Clock/Pixel_Clock.xci">
       <FileInfo>

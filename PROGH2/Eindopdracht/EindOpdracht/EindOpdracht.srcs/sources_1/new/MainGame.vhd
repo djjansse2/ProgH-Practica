@@ -33,6 +33,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity MainGame is
      Port ( sysclk : in STD_LOGIC;
+            nootBut : in STD_LOGIC_VECTOR (7 downto 0);
             VGAR, VGAG, VGAB : out STD_LOGIC;
             hsync, vsync : out STD_LOGIC);
 end MainGame;
@@ -41,7 +42,8 @@ architecture Behavioral of MainGame is
 
     component Pixel_Clock is
         Port (  clk_in1 : in STD_LOGIC;
-                clk_out1 : out STD_LOGIC );
+                clk_out1 : out STD_LOGIC;
+                clk_out2 : out STD_LOGIC );
     end component;
 
     component vga is
@@ -57,6 +59,7 @@ architecture Behavioral of MainGame is
                 hcount, vcount : in STD_LOGIC_VECTOR(10 downto 0);
                 dataInB : in STD_LOGIC_VECTOR(0 downto 0);
                 dataInN : in STD_LOGIC_VECTOR(0 downto 0);
+                nootIn : in STD_LOGIC_VECTOR(3 downto 0);
                 dataOut : out STD_LOGIC;
                 dataAddN : out STD_LOGIC_VECTOR(14 downto 0);
                 dataAddB : out STD_LOGIC_VECTOR(19 downto 0));
@@ -73,21 +76,29 @@ architecture Behavioral of MainGame is
                 clka : in STD_LOGIC;
                 douta : out STD_LOGIC_VECTOR(0 downto 0));
     end component;
+    
+    component TestNootSelect is
+        Port ( nootBut : in STD_LOGIC_VECTOR (7 downto 0);
+               nootOut : out STD_LOGIC_VECTOR (3 downto 0));
+    end component;
 
     SIGNAL spixclk : STD_LOGIC;
+    SIGNAL memclk : STD_LOGIC;
     SIGNAL vcounts, hcounts : STD_LOGIC_VECTOR(10 downto 0);
     SIGNAL NBAdds : STD_LOGIC_VECTOR (19 downto 0);
     SIGNAL NBDatas : STD_LOGIC_VECTOR (0 downto 0);
     SIGNAL MNAdds : STD_LOGIC_VECTOR (14 downto 0);
     SIGNAL MNDatas : STD_LOGIC_VECTOR (0 downto 0);
     SIGNAL vgadatas : STD_LOGIC;
+    SIGNAL nootSelS : STD_LOGIC_VECTOR (3 downto 0);
 
 begin
 
-    pix_clk : Pixel_Clock port map ( clk_in1 => sysclk, clk_out1 => spixclk );
+    pix_clk : Pixel_Clock port map ( clk_in1 => sysclk, clk_out1 => spixclk, clk_out2 => memclk );
     graphics : vga port map ( Pixel_clk => spixclk, dataIn => vgadatas, red => VGAR, green => VGAG, blue => VGAB, hsync => hsync, vsync => vsync, hcounto => hcounts, vcounto => vcounts );
-    NB : Notenbalk port map ( addra => NBAdds, clka => sysclk, douta => NBDatas);
-    MN : Muzieknoot port map ( addra => MNAdds, clka => sysclk, douta => MNDatas);
-    sprite : spriterenderer port map ( pixclk => spixclk, hcount => hcounts, vcount => vcounts, dataInB => NBDatas, dataInN => MNDatas, dataOut => vgadatas, dataAddN => MNAdds, dataAddB => NBAdds);
+    NB : Notenbalk port map ( addra => NBAdds, clka => memclk, douta => NBDatas);
+    MN : Muzieknoot port map ( addra => MNAdds, clka => memclk, douta => MNDatas);
+    NST : TestNootSelect port map ( nootBut => nootBut, nootOut => nootSelS);
+    sprite : spriterenderer port map ( pixclk => spixclk, hcount => hcounts, vcount => vcounts, dataInB => NBDatas, dataInN => MNDatas, nootIn => nootSelS, dataOut => vgadatas, dataAddN => MNAdds, dataAddB => NBAdds);
 
 end Behavioral;
