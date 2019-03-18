@@ -2,12 +2,12 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Tue Feb 12 01:01:49 2019
-# Process ID: 90488
-# Current directory: Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.runs/synth_1
+# Start of session at: Sun Mar 17 16:47:50 2019
+# Process ID: 81768
+# Current directory: D:/FPGA/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.runs/synth_1
 # Command line: vivado.exe -log PS2Reader.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source PS2Reader.tcl
-# Log file: Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.runs/synth_1/PS2Reader.vds
-# Journal file: Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.runs/synth_1\vivado.jou
+# Log file: D:/FPGA/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.runs/synth_1/PS2Reader.vds
+# Journal file: D:/FPGA/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source PS2Reader.tcl -notrace
 Command: synth_design -top PS2Reader -part xc7a35tcpg236-1
@@ -15,29 +15,28 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 89344 
+INFO: Helper process launched with PID 83416 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 345.199 ; gain = 100.570
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 348.566 ; gain = 104.098
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'PS2Reader' [Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/PS2Reader.vhd:49]
+INFO: [Synth 8-638] synthesizing module 'PS2Reader' [D:/FPGA/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/PS2Reader.vhd:50]
 	Parameter clk_freq bound to: 10000000 - type: integer 
 	Parameter debounce_counter_size bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'Segmentdriver' declared at 'D:/FPGA/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/Segmentdriver.vhd:36' bound to instance 'SegDriv' of component 'Segmentdriver' [D:/FPGA/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/PS2Reader.vhd:107]
+INFO: [Synth 8-638] synthesizing module 'Segmentdriver' [D:/FPGA/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/Segmentdriver.vhd:49]
+WARNING: [Synth 8-6014] Unused sequential element tempBCD_reg was removed.  [D:/FPGA/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/Segmentdriver.vhd:66]
+WARNING: [Synth 8-6014] Unused sequential element tempSegm_reg was removed.  [D:/FPGA/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/Segmentdriver.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'Segmentdriver' (1#1) [D:/FPGA/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/Segmentdriver.vhd:49]
 	Parameter counter_size bound to: 10 - type: integer 
-INFO: [Synth 8-3491] module 'debounce' declared at 'Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/Debounce.vhd:37' bound to instance 'dbps2clk' of component 'debounce' [Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/PS2Reader.vhd:95]
-INFO: [Synth 8-638] synthesizing module 'debounce' [Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/Debounce.vhd:46]
+INFO: [Synth 8-3491] module 'debounce' declared at 'D:/FPGA/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/Debounce.vhd:37' bound to instance 'dbps2din' of component 'debounce' [D:/FPGA/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/PS2Reader.vhd:109]
+INFO: [Synth 8-638] synthesizing module 'debounce' [D:/FPGA/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/Debounce.vhd:46]
 	Parameter counter_size bound to: 10 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'debounce' (1#1) [Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/Debounce.vhd:46]
-INFO: [Synth 8-3491] module 'Segmentdriver' declared at 'Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/Segmentdriver.vhd:36' bound to instance 'SegDriv' of component 'Segmentdriver' [Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/PS2Reader.vhd:99]
-INFO: [Synth 8-638] synthesizing module 'Segmentdriver' [Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/Segmentdriver.vhd:49]
-WARNING: [Synth 8-6014] Unused sequential element tempBCD_reg was removed.  [Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/Segmentdriver.vhd:66]
-WARNING: [Synth 8-6014] Unused sequential element tempSegm_reg was removed.  [Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/Segmentdriver.vhd:74]
-INFO: [Synth 8-256] done synthesizing module 'Segmentdriver' (2#1) [Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/Segmentdriver.vhd:49]
-	Parameter counter_size bound to: 10 - type: integer 
-INFO: [Synth 8-3491] module 'debounce' declared at 'Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/Debounce.vhd:37' bound to instance 'dbps2din' of component 'debounce' [Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/PS2Reader.vhd:101]
-WARNING: [Synth 8-614] signal 'shift_reg' is read in the process but is not in the sensitivity list [Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/PS2Reader.vhd:131]
-INFO: [Synth 8-256] done synthesizing module 'PS2Reader' (3#1) [Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/PS2Reader.vhd:49]
+INFO: [Synth 8-256] done synthesizing module 'debounce' (2#1) [D:/FPGA/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/Debounce.vhd:46]
+WARNING: [Synth 8-6014] Unused sequential element charbuf_reg was removed.  [D:/FPGA/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/PS2Reader.vhd:166]
+WARNING: [Synth 8-3848] Net rpsdin in module/entity PS2Reader does not have driver. [D:/FPGA/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/PS2Reader.vhd:89]
+INFO: [Synth 8-256] done synthesizing module 'PS2Reader' (3#1) [D:/FPGA/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/PS2Reader.vhd:50]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 397.559 ; gain = 152.930
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 400.906 ; gain = 156.438
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -46,46 +45,50 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin dbps2din:din to constant 0 [D:/FPGA/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/PS2Reader.vhd:109]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 397.559 ; gain = 152.930
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 400.906 ; gain = 156.438
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/constrs_1/new/constraint.xdc]
-Finished Parsing XDC File [Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/constrs_1/new/constraint.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/constrs_1/new/constraint.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/PS2Reader_propImpl.xdc].
+Parsing XDC File [D:/FPGA/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/constrs_1/new/constraint.xdc]
+Finished Parsing XDC File [D:/FPGA/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/constrs_1/new/constraint.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/FPGA/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/constrs_1/new/constraint.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/PS2Reader_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/PS2Reader_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 723.977 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 727.688 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 723.977 ; gain = 479.348
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 727.688 ; gain = 483.219
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 723.977 ; gain = 479.348
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 727.688 ; gain = 483.219
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 723.977 ; gain = 479.348
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 727.688 ; gain = 483.219
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-6014] Unused sequential element counter_out_reg was removed.  [Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/Debounce.vhd:60]
-WARNING: [Synth 8-6014] Unused sequential element divCnt_reg was removed.  [Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/Segmentdriver.vhd:61]
+WARNING: [Synth 8-6014] Unused sequential element divCnt_reg was removed.  [D:/FPGA/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/Segmentdriver.vhd:61]
+WARNING: [Synth 8-6014] Unused sequential element counter_out_reg was removed.  [D:/FPGA/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/Debounce.vhd:60]
+INFO: [Synth 8-5544] ROM "shift_reg" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "dcount" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "segBuf" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "dcount" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "skip" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element dcount_reg was removed.  [D:/FPGA/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/PS2Reader.vhd:145]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:24 . Memory (MB): peak = 723.977 ; gain = 479.348
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 727.688 ; gain = 483.219
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -99,28 +102,28 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     32 Bit       Adders := 1     
-	   2 Input     11 Bit       Adders := 2     
+	   2 Input     11 Bit       Adders := 1     
 	   2 Input      5 Bit       Adders := 1     
 	   2 Input      3 Bit       Adders := 1     
 +---XORs : 
-	   2 Input      1 Bit         XORs := 2     
+	   2 Input      1 Bit         XORs := 1     
 	   9 Input      1 Bit         XORs := 1     
 +---Registers : 
 	               16 Bit    Registers := 1     
-	               11 Bit    Registers := 2     
-	                8 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
 	                7 Bit    Registers := 1     
-	                4 Bit    Registers := 5     
-	                3 Bit    Registers := 1     
-	                2 Bit    Registers := 2     
-	                1 Bit    Registers := 5     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 2     
 +---Muxes : 
 	  11 Input     16 Bit        Muxes := 1     
-	   3 Input      5 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 2     
 	   4 Input      4 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 8     
 	  11 Input      1 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -136,24 +139,15 @@ Detailed RTL Component Info :
 	   9 Input      1 Bit         XORs := 1     
 +---Registers : 
 	               16 Bit    Registers := 1     
-	                8 Bit    Registers := 1     
-	                4 Bit    Registers := 4     
-	                1 Bit    Registers := 3     
+	                5 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
 +---Muxes : 
 	  11 Input     16 Bit        Muxes := 1     
-	   3 Input      5 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 8     
 	  11 Input      1 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
-Module debounce 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     11 Bit       Adders := 1     
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	               11 Bit    Registers := 1     
-	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
 Module Segmentdriver 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -166,6 +160,16 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input      4 Bit        Muxes := 2     
 	   4 Input      4 Bit        Muxes := 2     
+Module debounce 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               11 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -181,80 +185,27 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element dbps2din/result_reg was removed.  [D:/FPGA/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/Debounce.vhd:64]
 INFO: [Synth 8-5546] ROM "segBuf" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-6014] Unused sequential element dbps2clk/counter_out_reg was removed.  [Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/Debounce.vhd:60]
-WARNING: [Synth 8-6014] Unused sequential element SegDriv/divCnt_reg was removed.  [Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/Segmentdriver.vhd:61]
-WARNING: [Synth 8-6014] Unused sequential element dbps2din/counter_out_reg was removed.  [Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/Debounce.vhd:60]
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (psdone_reg)
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\segBuf_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\segBuf_reg[5] )
-INFO: [Synth 8-3886] merging instance 'segBuf_reg[9]' (FDE) to 'segBuf_reg[5]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\segBuf_reg[13] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\segBuf_reg[0] )
-INFO: [Synth 8-3886] merging instance 'segBuf_reg[4]' (FDE) to 'segBuf_reg[5]'
-INFO: [Synth 8-3886] merging instance 'segBuf_reg[8]' (FDE) to 'segBuf_reg[13]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\segBuf_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\segBuf_reg[2] )
-INFO: [Synth 8-3886] merging instance 'segBuf_reg[6]' (FDE) to 'segBuf_reg[5]'
-INFO: [Synth 8-3886] merging instance 'segBuf_reg[10]' (FDE) to 'segBuf_reg[13]'
-INFO: [Synth 8-3886] merging instance 'segBuf_reg[14]' (FDE) to 'segBuf_reg[12]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\segBuf_reg[3] )
-INFO: [Synth 8-3886] merging instance 'segBuf_reg[7]' (FDE) to 'segBuf_reg[5]'
-INFO: [Synth 8-3886] merging instance 'segBuf_reg[11]' (FDE) to 'segBuf_reg[13]'
-INFO: [Synth 8-3886] merging instance 'segBuf_reg[15]' (FDE) to 'segBuf_reg[12]'
-INFO: [Synth 8-3886] merging instance 'tempUni_reg[1]' (FDE) to 'tempUni_reg[3]'
-INFO: [Synth 8-3886] merging instance 'tempTen_reg[1]' (FDE) to 'tempUni_reg[3]'
-INFO: [Synth 8-3886] merging instance 'tempHun_reg[1]' (FDE) to 'tempTen_reg[3]'
-INFO: [Synth 8-3886] merging instance 'tempTho_reg[1]' (FDE) to 'tempUni_reg[3]'
-INFO: [Synth 8-3886] merging instance 'tempUni_reg[0]' (FDE) to 'tempUni_reg[3]'
-INFO: [Synth 8-3886] merging instance 'tempTen_reg[0]' (FDE) to 'tempTen_reg[3]'
-INFO: [Synth 8-3886] merging instance 'tempHun_reg[0]' (FDE) to 'tempHun_reg[3]'
-INFO: [Synth 8-3886] merging instance 'tempTho_reg[0]' (FDE) to 'tempUni_reg[3]'
-INFO: [Synth 8-3886] merging instance 'tempUni_reg[2]' (FDE) to 'tempUni_reg[3]'
-INFO: [Synth 8-3886] merging instance 'tempTen_reg[2]' (FDE) to 'tempTen_reg[3]'
-INFO: [Synth 8-3886] merging instance 'tempHun_reg[2]' (FDE) to 'tempHun_reg[3]'
-INFO: [Synth 8-3886] merging instance 'tempTho_reg[2]' (FDE) to 'tempTho_reg[3]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tempUni_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tempTen_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tempHun_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tempTho_reg[3] )
-INFO: [Synth 8-3886] merging instance 'SegDriv/segmentOut_reg[2]' (FDE) to 'SegDriv/segmentOut_reg[6]'
-INFO: [Synth 8-3886] merging instance 'SegDriv/segmentOut_reg[3]' (FDE) to 'SegDriv/segmentOut_reg[6]'
-INFO: [Synth 8-3886] merging instance 'SegDriv/segmentOut_reg[4]' (FDE) to 'SegDriv/segmentOut_reg[6]'
-INFO: [Synth 8-3886] merging instance 'SegDriv/segmentOut_reg[5]' (FDE) to 'SegDriv/segmentOut_reg[6]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\SegDriv/segmentOut_reg[6] )
-WARNING: [Synth 8-3332] Sequential element (shift_reg_reg[0]) is unused and will be removed from module PS2Reader.
-WARNING: [Synth 8-3332] Sequential element (dcount_reg[4]) is unused and will be removed from module PS2Reader.
-WARNING: [Synth 8-3332] Sequential element (dcount_reg[3]) is unused and will be removed from module PS2Reader.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'dcount_reg[3]/Q' [Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/PS2Reader.vhd:135]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/PS2Reader.vhd:135]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/PS2Reader.vhd:135]
-WARNING: [Synth 8-3332] Sequential element (dcount_reg[2]) is unused and will be removed from module PS2Reader.
-WARNING: [Synth 8-3332] Sequential element (dcount_reg[1]) is unused and will be removed from module PS2Reader.
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'dcount_reg[1]/Q' [Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/PS2Reader.vhd:135]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/PS2Reader.vhd:135]
-CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/PS2Reader.vhd:135]
-WARNING: [Synth 8-3332] Sequential element (dcount_reg[0]) is unused and will be removed from module PS2Reader.
-WARNING: [Synth 8-3332] Sequential element (dcount_reg[4]__0) is unused and will be removed from module PS2Reader.
-WARNING: [Synth 8-3332] Sequential element (dcount_reg[3]__0) is unused and will be removed from module PS2Reader.
-WARNING: [Synth 8-3332] Sequential element (dcount_reg[2]__0) is unused and will be removed from module PS2Reader.
-WARNING: [Synth 8-3332] Sequential element (dcount_reg[1]__0) is unused and will be removed from module PS2Reader.
-WARNING: [Synth 8-3332] Sequential element (dcount_reg[0]__0) is unused and will be removed from module PS2Reader.
-WARNING: [Synth 8-3332] Sequential element (SegDriv/segmentOut_reg[6]) is unused and will be removed from module PS2Reader.
-WARNING: [Synth 8-3332] Sequential element (psdone_reg) is unused and will be removed from module PS2Reader.
-WARNING: [Synth 8-3332] Sequential element (segBuf_reg[13]) is unused and will be removed from module PS2Reader.
-WARNING: [Synth 8-3332] Sequential element (segBuf_reg[12]) is unused and will be removed from module PS2Reader.
-WARNING: [Synth 8-3332] Sequential element (segBuf_reg[5]) is unused and will be removed from module PS2Reader.
-WARNING: [Synth 8-3332] Sequential element (segBuf_reg[3]) is unused and will be removed from module PS2Reader.
-WARNING: [Synth 8-3332] Sequential element (segBuf_reg[2]) is unused and will be removed from module PS2Reader.
-WARNING: [Synth 8-3332] Sequential element (segBuf_reg[1]) is unused and will be removed from module PS2Reader.
-WARNING: [Synth 8-3332] Sequential element (segBuf_reg[0]) is unused and will be removed from module PS2Reader.
-WARNING: [Synth 8-3332] Sequential element (tempHun_reg[3]) is unused and will be removed from module PS2Reader.
-WARNING: [Synth 8-3332] Sequential element (tempTho_reg[3]) is unused and will be removed from module PS2Reader.
-WARNING: [Synth 8-3332] Sequential element (tempUni_reg[3]) is unused and will be removed from module PS2Reader.
-WARNING: [Synth 8-3332] Sequential element (tempTen_reg[3]) is unused and will be removed from module PS2Reader.
+WARNING: [Synth 8-6014] Unused sequential element dcount_reg was removed.  [D:/FPGA/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/PS2Reader.vhd:145]
+WARNING: [Synth 8-6014] Unused sequential element SegDriv/divCnt_reg was removed.  [D:/FPGA/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/Segmentdriver.vhd:61]
+WARNING: [Synth 8-6014] Unused sequential element dbps2din/counter_out_reg was removed.  [D:/FPGA/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/Debounce.vhd:60]
+WARNING: [Synth 8-3332] Sequential element (dbps2din/flipflops_reg[1]) is unused and will be removed from module PS2Reader.
+WARNING: [Synth 8-3332] Sequential element (dbps2din/flipflops_reg[0]) is unused and will be removed from module PS2Reader.
+WARNING: [Synth 8-3332] Sequential element (dbps2din/counter_out_reg[10]) is unused and will be removed from module PS2Reader.
+WARNING: [Synth 8-3332] Sequential element (dbps2din/counter_out_reg[9]) is unused and will be removed from module PS2Reader.
+WARNING: [Synth 8-3332] Sequential element (dbps2din/counter_out_reg[8]) is unused and will be removed from module PS2Reader.
+WARNING: [Synth 8-3332] Sequential element (dbps2din/counter_out_reg[7]) is unused and will be removed from module PS2Reader.
+WARNING: [Synth 8-3332] Sequential element (dbps2din/counter_out_reg[6]) is unused and will be removed from module PS2Reader.
+WARNING: [Synth 8-3332] Sequential element (dbps2din/counter_out_reg[5]) is unused and will be removed from module PS2Reader.
+WARNING: [Synth 8-3332] Sequential element (dbps2din/counter_out_reg[4]) is unused and will be removed from module PS2Reader.
+WARNING: [Synth 8-3332] Sequential element (dbps2din/counter_out_reg[3]) is unused and will be removed from module PS2Reader.
+WARNING: [Synth 8-3332] Sequential element (dbps2din/counter_out_reg[2]) is unused and will be removed from module PS2Reader.
+WARNING: [Synth 8-3332] Sequential element (dbps2din/counter_out_reg[1]) is unused and will be removed from module PS2Reader.
+WARNING: [Synth 8-3332] Sequential element (dbps2din/counter_out_reg[0]) is unused and will be removed from module PS2Reader.
+WARNING: [Synth 8-3332] Sequential element (edgedone_reg[0]) is unused and will be removed from module PS2Reader.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:25 . Memory (MB): peak = 723.977 ; gain = 479.348
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 727.688 ; gain = 483.219
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -266,13 +217,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:33 . Memory (MB): peak = 723.977 ; gain = 479.348
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 727.688 ; gain = 483.219
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:33 . Memory (MB): peak = 723.977 ; gain = 479.348
+Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 727.688 ; gain = 483.219
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -284,7 +235,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:34 . Memory (MB): peak = 742.762 ; gain = 498.133
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 746.938 ; gain = 502.469
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -308,7 +259,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:35 . Memory (MB): peak = 742.762 ; gain = 498.133
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 746.938 ; gain = 502.469
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -321,7 +272,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:35 . Memory (MB): peak = 742.762 ; gain = 498.133
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 746.938 ; gain = 502.469
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -333,39 +284,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:35 . Memory (MB): peak = 742.762 ; gain = 498.133
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 746.938 ; gain = 502.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:35 . Memory (MB): peak = 742.762 ; gain = 498.133
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 746.938 ; gain = 502.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:35 . Memory (MB): peak = 742.762 ; gain = 498.133
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 746.938 ; gain = 502.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:35 . Memory (MB): peak = 742.762 ; gain = 498.133
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start ROM, RAM, DSP and Shift Register Reporting
----------------------------------------------------------------------------------
-
-Static Shift Register Report:
-+------------+------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|Module Name | RTL Name         | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
-+------------+------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|PS2Reader   | shift_reg_reg[8] | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
-+------------+------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-
----------------------------------------------------------------------------------
-Finished ROM, RAM, DSP and Shift Register Reporting
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 746.938 ; gain = 502.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -383,47 +320,44 @@ Report Cell Usage:
 +------+-------+------+
 |1     |BUFG   |     1|
 |2     |CARRY4 |    20|
-|3     |LUT1   |     7|
-|4     |LUT2   |    42|
-|5     |LUT3   |     5|
+|3     |LUT1   |     2|
+|4     |LUT2   |    38|
+|5     |LUT3   |     2|
 |6     |LUT4   |     7|
-|7     |LUT5   |     6|
-|8     |LUT6   |     4|
-|9     |SRL16E |     1|
-|10    |FDRE   |    83|
-|11    |FDSE   |     4|
-|12    |IBUF   |     3|
-|13    |OBUF   |    20|
+|7     |LUT5   |    14|
+|8     |LUT6   |     8|
+|9     |FDRE   |    90|
+|10    |FDSE   |     4|
+|11    |IBUF   |     3|
+|12    |OBUF   |    21|
 +------+-------+------+
 
 Report Instance Areas: 
-+------+-----------+--------------+------+
-|      |Instance   |Module        |Cells |
-+------+-----------+--------------+------+
-|1     |top        |              |   203|
-|2     |  SegDriv  |Segmentdriver |   101|
-|3     |  dbps2clk |debounce      |    29|
-|4     |  dbps2din |debounce_0    |    29|
-+------+-----------+--------------+------+
++------+----------+--------------+------+
+|      |Instance  |Module        |Cells |
++------+----------+--------------+------+
+|1     |top       |              |   210|
+|2     |  SegDriv |Segmentdriver |   116|
++------+----------+--------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:35 . Memory (MB): peak = 742.762 ; gain = 498.133
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 746.938 ; gain = 502.469
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 6 critical warnings and 29 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:26 . Memory (MB): peak = 742.762 ; gain = 171.715
-Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:35 . Memory (MB): peak = 742.762 ; gain = 498.133
+Synthesis finished with 0 errors, 0 critical warnings and 21 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:24 . Memory (MB): peak = 746.938 ; gain = 175.688
+Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 746.938 ; gain = 502.469
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 23 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-138] Pushed 1 inverter(s) to 1 load pin(s).
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-62 Infos, 32 Warnings, 6 Critical Warnings and 0 Errors encountered.
+25 Infos, 26 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:39 . Memory (MB): peak = 744.992 ; gain = 513.500
-INFO: [Common 17-1381] The checkpoint 'Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.runs/synth_1/PS2Reader.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 749.340 ; gain = 517.684
+INFO: [Common 17-1381] The checkpoint 'D:/FPGA/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.runs/synth_1/PS2Reader.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file PS2Reader_utilization_synth.rpt -pb PS2Reader_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 744.992 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Tue Feb 12 01:02:34 2019...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 749.340 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Mar 17 16:48:28 2019...

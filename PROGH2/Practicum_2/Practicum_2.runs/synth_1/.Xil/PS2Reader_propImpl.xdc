@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/constrs_1/new/constraint.xdc rfile:../../../Practicum_2.srcs/constrs_1/new/constraint.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:D:/FPGA/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/constrs_1/new/constraint.xdc rfile:../../../Practicum_2.srcs/constrs_1/new/constraint.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN W5 [get_ports clk]
 set_property src_info {type:XDC file:1 line:3 export:INPUT save:INPUT read:READ} [current_design]
@@ -45,3 +45,5 @@ set_property src_info {type:XDC file:1 line:47 export:INPUT save:INPUT read:READ
 set_property PACKAGE_PIN V13 [get_ports {psdout[7]}]
 set_property src_info {type:XDC file:1 line:50 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN U16 [get_ports psdone]
+set_property src_info {type:XDC file:1 line:53 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN V16 [get_ports pserrorout]

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Mon Mar 18 09:21:47 2019
+# Process ID: 79348
+# Current directory: D:/FPGA/ProgH-Practicum/PROGH2/EindopdrachtMicroblaze/EindopdrachtMicroblaze.runs/impl_1
+# Command line: vivado.exe -log NoteviewTop.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source NoteviewTop.tcl -notrace
+# Log file: D:/FPGA/ProgH-Practicum/PROGH2/EindopdrachtMicroblaze/EindopdrachtMicroblaze.runs/impl_1/NoteviewTop.vdi
+# Journal file: D:/FPGA/ProgH-Practicum/PROGH2/EindopdrachtMicroblaze/EindopdrachtMicroblaze.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source NoteviewTop.tcl -notrace

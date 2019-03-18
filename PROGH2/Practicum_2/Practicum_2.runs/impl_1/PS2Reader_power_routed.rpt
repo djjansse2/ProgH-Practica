@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date             : Tue Feb 12 01:03:45 2019
-| Host             : DESKTOP-MV4G04O running 64-bit major release  (build 9200)
+| Date             : Sun Mar 17 16:49:22 2019
+| Host             : LAPTOP-HRAQ4RRP running 64-bit major release  (build 9200)
 | Command          : report_power -file PS2Reader_power_routed.rpt -pb PS2Reader_power_summary_routed.pb -rpx PS2Reader_power_routed.rpx
 | Design           : PS2Reader
 | Device           : xc7a35tcpg236-1
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 4.786        |
+| Total On-Chip Power (W)  | 9.607        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 4.698        |
-| Device Static (W)        | 0.089        |
+| Dynamic (W)              | 9.473        |
+| Device Static (W)        | 0.134        |
 | Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 61.1         |
-| Junction Temperature (C) | 48.9         |
+| Max Ambient (C)          | 37.0         |
+| Junction Temperature (C) | 73.0         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -49,21 +49,20 @@ Table of Contents
 1.1 On-Chip Components
 ----------------------
 
-+-------------------------+-----------+----------+-----------+-----------------+
-| On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
-+-------------------------+-----------+----------+-----------+-----------------+
-| Slice Logic             |     0.307 |      187 |       --- |             --- |
-|   LUT as Logic          |     0.237 |       45 |     20800 |            0.22 |
-|   CARRY4                |     0.037 |       20 |      8150 |            0.25 |
-|   Register              |     0.027 |       87 |     41600 |            0.21 |
-|   BUFG                  |     0.006 |        1 |        32 |            3.13 |
-|   LUT as Shift Register |    <0.001 |        1 |      9600 |            0.01 |
-|   Others                |     0.000 |        8 |       --- |             --- |
-| Signals                 |     0.331 |      147 |       --- |             --- |
-| I/O                     |     4.059 |       23 |       106 |           21.70 |
-| Static Power            |     0.089 |          |           |                 |
-| Total                   |     4.786 |          |           |                 |
-+-------------------------+-----------+----------+-----------+-----------------+
++----------------+-----------+----------+-----------+-----------------+
+| On-Chip        | Power (W) | Used     | Available | Utilization (%) |
++----------------+-----------+----------+-----------+-----------------+
+| Slice Logic    |     0.284 |      190 |       --- |             --- |
+|   LUT as Logic |     0.223 |       46 |     20800 |            0.22 |
+|   CARRY4       |     0.035 |       20 |      8150 |            0.25 |
+|   Register     |     0.021 |       94 |     41600 |            0.23 |
+|   BUFG         |     0.006 |        1 |        32 |            3.13 |
+|   Others       |     0.000 |        4 |       --- |             --- |
+| Signals        |     0.343 |      163 |       --- |             --- |
+| I/O            |     8.846 |       24 |       106 |           22.64 |
+| Static Power   |     0.134 |          |           |                 |
+| Total          |     9.607 |          |           |                 |
++----------------+-----------+----------+-----------+-----------------+
 
 
 1.2 Power Supply Summary
@@ -72,16 +71,16 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.674 |       0.651 |      0.024 |
-| Vccaux    |       1.800 |     0.162 |       0.148 |      0.014 |
-| Vcco33    |       3.300 |     1.146 |       1.145 |      0.001 |
+| Vccint    |       1.000 |     0.700 |       0.639 |      0.061 |
+| Vccaux    |       1.800 |     0.342 |       0.324 |      0.018 |
+| Vcco33    |       3.300 |     2.502 |       2.501 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.001 |       0.000 |      0.001 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
@@ -136,13 +135,11 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+------------+-----------+
-| Name       | Power (W) |
-+------------+-----------+
-| PS2Reader  |     4.698 |
-|   SegDriv  |     0.370 |
-|   dbps2clk |     0.113 |
-|   dbps2din |     0.103 |
-+------------+-----------+
++-----------+-----------+
+| Name      | Power (W) |
++-----------+-----------+
+| PS2Reader |     9.473 |
+|   SegDriv |     0.494 |
++-----------+-----------+
 
 

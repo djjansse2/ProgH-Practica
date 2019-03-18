@@ -17,24 +17,26 @@ proc create_report { reportName command } {
   }
 }
 set_param xicom.use_bs_reader 1
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.cache/wt [current_project]
-set_property parent.project_path Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.xpr [current_project]
+set_property webtalk.parent_dir D:/FPGA/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.cache/wt [current_project]
+set_property parent.project_path D:/FPGA/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
-set_property ip_output_repo y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.cache/ip [current_project]
+set_property ip_output_repo d:/FPGA/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
-  Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/PS2Reader.vhd
-  Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/Segmentdriver.vhd
-  Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/StateMachine.vhd
-  Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/KeyboardMain.vhd
-  Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/Debounce.vhd
+  D:/FPGA/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/PS2Reader.vhd
+  D:/FPGA/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/Segmentdriver.vhd
+  D:/FPGA/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/StateMachine.vhd
+  D:/FPGA/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/KeyboardMain.vhd
+  D:/FPGA/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/sources_1/new/Debounce.vhd
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -44,8 +46,8 @@ read_vhdl -library xil_defaultlib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/constrs_1/new/constraint.xdc
-set_property used_in_implementation false [get_files Y:/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/constrs_1/new/constraint.xdc]
+read_xdc D:/FPGA/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/constrs_1/new/constraint.xdc
+set_property used_in_implementation false [get_files D:/FPGA/ProgH-Practicum/PROGH2/Practicum_2/Practicum_2.srcs/constrs_1/new/constraint.xdc]
 
 
 synth_design -top PS2Reader -part xc7a35tcpg236-1
